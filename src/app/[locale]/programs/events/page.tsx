@@ -9,8 +9,12 @@ import { FaTelegramPlane } from 'react-icons/fa';
 export default function EventsPage() {
   const t = useTranslations('programs');
   const [width, setWidth] = useState<number>(0);
+  const [mounted, setMounted] = useState<boolean>(false);
 
   useEffect(() => {
+    // mark mounted for showing real content (skeleton until hydrate)
+    setMounted(true);
+
     function update() {
       setWidth(typeof window !== 'undefined' ? window.innerWidth : 0);
     }
@@ -20,6 +24,54 @@ export default function EventsPage() {
   }, []);
 
   const bp = width >= 1024 ? 'lg' : width >= 768 ? 'md' : width >= 640 ? 'sm' : 'xs';
+
+  // Simple loading skeleton while component hydrates / mounts
+  if (!mounted) {
+    return (
+      <div className="min-h-screen pt-20">
+        <section className="relative -mt-20 pt-20 py-24 bg-gradient-to-br from-secondary/10 to-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-5xl mx-auto">
+              <div className="relative bg-white/10 backdrop-blur-xl rounded-3xl p-6 md:p-10 border border-white/30 shadow-xl overflow-hidden animate-pulse">
+                <div className="h-6 w-40 bg-white/20 rounded-full mb-6"></div>
+                <div className="h-10 bg-gradient-to-r from-primary/40 to-secondary/40 rounded-md mb-4" />
+                <div className="h-8 bg-white/20 rounded-md w-3/4 mb-4"></div>
+                <div className="h-4 bg-white/10 rounded-md w-1/2"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto space-y-8">
+              <div className="bg-white/50 backdrop-blur-xl rounded-3xl p-8 md:p-12 border border-white/40 animate-pulse">
+                <div className="h-6 w-1/3 bg-white/20 rounded mb-4"></div>
+                <div className="grid md:grid-cols-3 gap-6">
+                  <div className="h-40 bg-white/10 rounded-2xl"></div>
+                  <div className="h-40 bg-white/10 rounded-2xl"></div>
+                  <div className="h-40 bg-white/10 rounded-2xl"></div>
+                </div>
+              </div>
+
+              <div className="bg-white/50 backdrop-blur-xl rounded-3xl p-8 md:p-12 border border-white/40 animate-pulse">
+                <div className="h-6 w-1/2 bg-white/20 rounded mb-4"></div>
+                <div className="space-y-3">
+                  <div className="h-4 bg-white/10 rounded w-full"></div>
+                  <div className="h-4 bg-white/10 rounded w-full"></div>
+                </div>
+              </div>
+
+              <div className="bg-white/50 rounded-2xl p-6 border border-white/30 animate-pulse">
+                <div className="h-5 w-1/6 bg-white/20 rounded mb-2"></div>
+                <div className="h-6 bg-white/10 rounded w-3/4"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen pt-20">

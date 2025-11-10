@@ -8,17 +8,15 @@ import { FaTelegramPlane, FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-i
 
 export default function Contact() {
   const t = useTranslations('contact');
+  const CONTACT_EMAIL = process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? 'fundacja@buddys.network';
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: '',
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-  };
+  // TODO: For production, replace this client-side approach with a proper backend email service
+  // like EmailJS, Formspree, or your own API endpoint to handle form submissions reliably
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -48,12 +46,12 @@ export default function Contact() {
           <div className="grid lg:grid-cols-2 gap-12 mb-16">
             {/* Contact Form */}
             <div
-              className="bg-white/10 backdrop-blur-xl rounded-3xl p-6 border border-white/30 shadow-xl rounded-[40px] p-8 md:p-10 animate-fade-in hover:shadow-2xl hover:scale-[1.01] transition-all duration-300"
+              className="bg-white/10 backdrop-blur-xl rounded-3xl p-6 border border-white/30 shadow-xl rounded-[40px] p-8 md:p-10 hover:shadow-2xl hover:scale-[1.01] transition-all duration-300 animate-fade-in"
               style={{ animationDelay: '0.3s' }}
             >
               <h3 className="text-2xl font-bold text-neutral-darkest mb-6">{t('form.title')}</h3>
 
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form className="space-y-6">
                 {/* Name Input */}
                 <div>
                   <label
@@ -114,9 +112,45 @@ export default function Contact() {
                   />
                 </div>
 
-                {/* Submit Button - Updated with new style */}
+                {/* Submit Button with multiple options */}
+                {/* Submit Button - Gmail Auto-filled */}
                 <button
                   type="submit"
+                  onClick={(e) => {
+                    e.preventDefault(); // Prevent form submission, handle manually
+                    
+                    const emailSubject = `Website Contact: ${formData.name}`;
+                    const emailBody = `Name: ${formData.name}
+
+Email: ${formData.email}
+
+Message:
+${formData.message}
+
+---
+Sent from website contact form`;
+
+                    // Open Gmail with everything pre-filled
+                    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(CONTACT_EMAIL)}&su=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+                    window.open(gmailUrl, '_blank');
+                    
+                    // Also copy to clipboard as backup
+                    navigator.clipboard.writeText(`To: ${CONTACT_EMAIL}
+Subject: ${emailSubject}
+
+${emailBody}`).then(() => {
+                      alert('Gmail opened with your message automatically filled in!');
+                    }).catch(() => {
+                      alert('Gmail opened with your message automatically filled in!');
+                    });
+
+                    // Clear the form after successful submission
+                    setFormData({
+                      name: '',
+                      email: '',
+                      message: '',
+                    });
+                  }}
                   className="w-full px-8 py-4 bg-gradient-to-r from-primary to-secondary text-white font-medium rounded-full hover:shadow-lg hover:scale-105 transition-all duration-300 group"
                 >
                   <span className="flex items-center justify-center">
@@ -130,10 +164,7 @@ export default function Contact() {
             {/* Get Involved Cards */}
               <div className="space-y-6">
               {/* Telegram CTA */}
-              <div
-                className="bg-white/10 backdrop-blur-xl rounded-3xl p-6 border border-white/30 shadow-xl rounded-3xl p-8 hover:shadow-lg hover:scale-[1.01] transition-all animate-fade-in"
-                style={{ animationDelay: '0.5s' }}
-              >
+              <div className="bg-white/10 backdrop-blur-xl rounded-3xl p-6 border border-white/30 shadow-xl rounded-3xl p-8 hover:shadow-lg hover:scale-[1.01] transition-all animate-fade-in">
                 <div className="flex items-start space-x-4">
                   <div className="w-14 h-14 bg-gradient-to-br from-primary to-accent rounded-2xl flex items-center justify-center flex-shrink-0 p-3">
                     <FaTelegramPlane className="w-7 h-7 text-white" aria-hidden />
@@ -169,10 +200,7 @@ export default function Contact() {
               </div>
 
               {/* Meeting Info */}
-              <div
-                className="bg-white/10 backdrop-blur-xl rounded-3xl p-6 border border-white/30 shadow-xl rounded-3xl p-8 animate-fade-in hover:shadow-lg hover:scale-[1.01] transition-all"
-                style={{ animationDelay: '0.7s' }}
-              >
+              <div className="bg-white/10 backdrop-blur-xl rounded-3xl p-6 border border-white/30 shadow-xl rounded-3xl p-8 hover:shadow-lg hover:scale-[1.01] transition-all animate-fade-in">
                 <div className="flex items-start space-x-4">
                   <div className="w-14 h-14 bg-gradient-to-br from-secondary to-nature rounded-2xl flex items-center justify-center flex-shrink-0 p-3">
                     <FiUsers className="w-7 h-7 text-white" aria-hidden />
@@ -187,10 +215,7 @@ export default function Contact() {
               </div>
 
               {/* Email Contact */}
-              <div
-                className="bg-white/10 backdrop-blur-xl rounded-3xl p-6 border border-white/30 shadow-xl rounded-3xl p-8 animate-fade-in hover:shadow-lg hover:scale-[1.01] transition-all"
-                style={{ animationDelay: '0.9s' }}
-              >
+              <div className="bg-white/10 backdrop-blur-xl rounded-3xl p-6 border border-white/30 shadow-xl rounded-3xl p-8 hover:shadow-lg hover:scale-[1.01] transition-all animate-fade-in">
                 <div className="flex items-start space-x-4">
                   <div className="w-14 h-14 bg-gradient-to-br from-nature to-secondary rounded-2xl flex items-center justify-center flex-shrink-0 p-3">
                     <FiMail className="w-7 h-7 text-white" aria-hidden />
@@ -200,10 +225,10 @@ export default function Contact() {
                       {t('email.title')}
                     </h4>
                     <a
-                      href="mailto:info@buddys.network"
+                      href="mailto:fundacja@buddys.network"
                       className="text-primary hover:text-secondary transition-colors font-medium"
                     >
-                      info@buddys.network
+                        fundacja@buddys.network
                     </a>
                   </div>
                 </div>

@@ -159,39 +159,6 @@ export function AnimatedStat({ value, label, suffix = '', className = '' }: Anim
   );
 }
 
-// Component for scroll-animated container
-interface ScrollAnimatedProps {
-  children: React.ReactNode;
-  animation?: 'fadeIn' | 'slideLeft' | 'slideRight' | 'scaleIn';
-  className?: string;
-  threshold?: number;
-}
-
-export function ScrollAnimated({
-  children,
-  animation = 'fadeIn',
-  className = '',
-  threshold = 0.1,
-}: ScrollAnimatedProps) {
-  const { elementRef } = useScrollAnimation(threshold);
-
-  const animationClass = `scroll-${
-    animation === 'fadeIn'
-      ? 'fade-in'
-      : animation === 'slideLeft'
-        ? 'slide-left'
-        : animation === 'slideRight'
-          ? 'slide-right'
-          : 'scale-in'
-  }`;
-
-  return (
-    <div ref={elementRef} className={`${animationClass} ${className}`}>
-      {children}
-    </div>
-  );
-}
-
 // Component for staggered card animations
 interface StaggeredCardsProps {
   children: React.ReactNode[];

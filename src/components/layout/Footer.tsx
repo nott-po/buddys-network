@@ -8,6 +8,7 @@ import { FaTelegramPlane, FaFacebookF, FaInstagram } from 'react-icons/fa';
 
 export default function Footer() {
   const t = useTranslations('footer');
+  const CONTACT_EMAIL = process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? 'myfolderp@gmail.com';
   const currentYear = new Date().getFullYear();
 
   return (
@@ -22,7 +23,7 @@ export default function Footer() {
               <div className="flex items-center space-x-3">
                 <div className="relative w-14 h-14">
                   <Image
-                    src="/images/logo/logo2.png"
+                    src="/images/logo/logo.png"
                     alt="Buddy's Network"
                     fill
                     className="object-contain"
@@ -122,10 +123,10 @@ export default function Footer() {
                   </div>
                   <div>
                     <a
-                      href="mailto:info@buddys.network"
+                      href={`mailto:${CONTACT_EMAIL}`}
                       className="text-neutral-lightGray hover:text-primary transition-colors text-sm"
                     >
-                      info@buddys.network
+                      {CONTACT_EMAIL}
                     </a>
                     <p className="text-neutral-lightGray text-sm mt-1">+48 123 456 789</p>
                   </div>

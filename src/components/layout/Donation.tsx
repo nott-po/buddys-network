@@ -2,10 +2,13 @@
 
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
+ 
 import { FiCheck, FiHeart, FiUsers, FiShare2, FiArrowRight } from 'react-icons/fi';
 
 export default function Donation() {
   const t = useTranslations('donation');
+  // Use Buddy's network address by default; overridable via NEXT_PUBLIC_CONTACT_EMAIL
+  const CONTACT_EMAIL = process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? 'fundacja@buddys.network';
 
   return (
     <section
@@ -26,15 +29,18 @@ export default function Donation() {
           </div>
 
           {/* Main CTA Card */}
-          <div className="relative mb-16 animate-fade-in" style={{ animationDelay: '0.3s' }}>
+          <div className="relative mb-16">
             {/* Decorative bg */}
-            <div className="absolute -top-6 -left-6 w-40 h-40 bg-primary/10 rounded-full blur-3xl animate-float"></div>
+            <div className="absolute -top-6 -left-6 w-40 h-40 bg-primary/10 rounded-full blur-3xl animate-float" />
             <div
               className="absolute -bottom-6 -right-6 w-48 h-48 bg-secondary/10 rounded-full blur-3xl animate-float"
               style={{ animationDelay: '1s' }}
-            ></div>
+            />
 
-            <div className="relative bg-white/10 backdrop-blur-xl rounded-3xl p-6 border border-white/30 shadow-xl rounded-[40px] p-10 md:p-12">
+            <div
+              className="relative bg-white/10 backdrop-blur-xl rounded-3xl p-6 border border-white/30 shadow-xl rounded-[40px] p-10 md:p-12 animate-fade-in"
+              style={{ animationDelay: '0.3s' }}
+            >
               <div className="grid lg:grid-cols-2 gap-8 items-center">
                 {/* Message */}
                 <div>
@@ -47,8 +53,8 @@ export default function Donation() {
                   <ul className="space-y-3 mb-8">
                     <li className="flex items-start space-x-3">
                       <div className="w-6 h-6 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center flex-shrink-0 mt-1 p-[2px]">
-                          <FiCheck className="w-4 h-4 text-white" aria-hidden />
-                        </div>
+                        <FiCheck className="w-4 h-4 text-white" aria-hidden />
+                      </div>
                       <span className="text-neutral-gray">{t('main.point1')}</span>
                     </li>
                     <li className="flex items-start space-x-3">
@@ -69,21 +75,43 @@ export default function Donation() {
                 {/* CTA */}
                 <div className="bg-white/10 backdrop-blur-xl rounded-3xl p-6 border border-white/30 shadow-xl rounded-3xl p-8">
                   <div className="text-center mb-6">
-                        <div className="w-20 h-20 bg-gradient-to-br from-secondary to-nature rounded-full flex items-center justify-center mx-auto mb-4 p-3">
-                        <FiHeart className="w-10 h-10 text-white" aria-hidden />
-                      </div>
+                    <div className="w-20 h-20 bg-gradient-to-br from-secondary to-nature rounded-full flex items-center justify-center mx-auto mb-4 p-3">
+                      <FiHeart className="w-10 h-10 text-white" aria-hidden />
+                    </div>
                     <h4 className="text-2xl font-bold text-neutral-darkest mb-2">
                       {t('cta.title')}
                     </h4>
                     <p className="text-neutral-gray mb-6">{t('cta.description')}</p>
                   </div>
 
-                  <Link
-                    href="mailto:info@buddys.network?subject=Support Buddy's Network"
+                  <button
+                    type="button"
+                    onClick={() => {
+                      const emailSubject = `Support Buddy's Network`;
+                      const emailBody = `${t('cta.description') || ''}\n\n---\nSent from website support card`;
+
+                      // Open Gmail compose in a new tab (fallback to mailto can be added if needed)
+                      const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(
+                        CONTACT_EMAIL
+                      )}&su=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+                      window.open(gmailUrl, '_blank');
+
+                      // Copy message to clipboard as a backup
+                      navigator.clipboard
+                        .writeText(`To: ${CONTACT_EMAIL}\nSubject: ${emailSubject}\n\n${emailBody}`)
+                        .then(() => {
+                          // Inform the user
+                          // Use a short message; translations could be added
+                          alert('Opened Gmail compose window and copied the message to clipboard.');
+                        })
+                        .catch(() => {
+                          alert('Opened Gmail compose window.');
+                        });
+                    }}
                     className="block w-full px-8 py-4 bg-gradient-to-r from-primary to-secondary text-white font-semibold rounded-full hover:shadow-lg hover:scale-105 transition-all duration-300 text-center"
                   >
                     {t('cta.button')}
-                  </Link>
+                  </button>
 
                   <p className="text-xs text-neutral-gray text-center mt-4">{t('cta.note')}</p>
                 </div>
@@ -92,17 +120,14 @@ export default function Donation() {
           </div>
 
           {/* Ways to Support */}
-          <div className="animate-fade-in" style={{ animationDelay: '0.5s' }}>
+            <div className="animate-fade-in">
             <h3 className="text-3xl font-bold text-neutral-darkest text-center mb-10">
               {t('ways.title')}
             </h3>
 
             <div className="grid md:grid-cols-3 gap-6">
               {/* Volunteer */}
-              <div
-                className="bg-white/10 backdrop-blur-xl rounded-3xl p-6 border border-white/30 shadow-xl rounded-3xl p-8 hover:shadow-2xl hover:-translate-y-1 hover:scale-105 transition-all duration-300 animate-fade-in"
-                style={{ animationDelay: '0.7s' }}
-              >
+              <div className="bg-white/10 backdrop-blur-xl rounded-3xl p-6 border border-white/30 shadow-xl rounded-3xl p-8 hover:shadow-2xl hover:-translate-y-1 hover:scale-105 transition-all duration-300 animate-fade-in">
                 <div className="w-14 h-14 bg-gradient-to-br from-primary to-accent rounded-2xl flex items-center justify-center mb-6 p-3">
                   <FiUsers className="w-7 h-7 text-white" aria-hidden />
                 </div>
@@ -122,10 +147,7 @@ export default function Donation() {
               </div>
 
               {/* Share */}
-              <div
-                className="bg-white/10 backdrop-blur-xl rounded-3xl p-6 border border-white/30 shadow-xl rounded-3xl p-8 hover:shadow-2xl hover:-translate-y-1 hover:scale-105 transition-all duration-300 animate-fade-in"
-                style={{ animationDelay: '0.9s' }}
-              >
+              <div className="bg-white/10 backdrop-blur-xl rounded-3xl p-6 border border-white/30 shadow-xl rounded-3xl p-8 hover:shadow-2xl hover:-translate-y-1 hover:scale-105 transition-all duration-300 animate-fade-in">
                 <div className="w-14 h-14 bg-gradient-to-br from-secondary to-nature rounded-2xl flex items-center justify-center mb-6 p-3">
                   <FiShare2 className="w-7 h-7 text-white" aria-hidden />
                 </div>
@@ -147,10 +169,7 @@ export default function Donation() {
               </div>
 
               {/* Partner */}
-              <div
-                className="bg-white/10 backdrop-blur-xl rounded-3xl p-6 border border-white/30 shadow-xl rounded-3xl p-8 hover:shadow-lg hover:scale-105 transition-all duration-300 animate-fade-in"
-                style={{ animationDelay: '1.1s' }}
-              >
+              <div className="bg-white/10 backdrop-blur-xl rounded-3xl p-6 border border-white/30 shadow-xl rounded-3xl p-8 hover:shadow-lg hover:scale-105 transition-all duration-300 animate-fade-in">
                 <div className="w-14 h-14 bg-gradient-to-br from-nature to-secondary rounded-2xl flex items-center justify-center mb-6 p-3">
                   <FiUsers className="w-7 h-7 text-white" aria-hidden />
                 </div>
@@ -161,17 +180,17 @@ export default function Donation() {
                   {t('ways.partner.description')}
                 </p>
                 <Link
-                  href="mailto:info@buddys.network?subject=Partnership Inquiry"
+                  href={`mailto:${CONTACT_EMAIL}?subject=Partnership Inquiry`}
                   className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-primary to-secondary text-white font-medium rounded-full transition-all duration-300"
                 >
                   {t('ways.partner.link')}
                   <FiArrowRight className="w-4 h-4 ml-1" aria-hidden />
                 </Link>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
+            </div> {/* close grid */}
+          </div> {/* close Ways to Support wrapper */}
+        </div> {/* close max-w-7xl */}
+      </div> {/* close container */}
 
       {/* Decorative floating elements */}
       <div className="absolute top-32 left-8 w-24 h-24 bg-nature/5 rounded-full blur-2xl animate-float"></div>

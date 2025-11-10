@@ -3,7 +3,7 @@
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import Image from 'next/image';
-import { AnimatedStat, ScrollAnimated } from '../../hooks/useScrollAnimations';
+import { AnimatedStat } from '../../hooks/useScrollAnimations';
 
 export default function Hero() {
   const t = useTranslations('hero');
@@ -30,7 +30,7 @@ export default function Hero() {
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left: Enhanced Main Content Card */}
-            <ScrollAnimated animation="slideLeft" className="relative">
+            <div className="relative animate-fade-in">
               {/* Main bg-white/10 backdrop-blur-xl border border-white/20 Card */}
               <div className="relative bg-white/10 backdrop-blur-xl rounded-3xl p-6 border border-white/30 shadow-xl rounded-[40px] p-10 md:p-12 shadow-2xl overflow-hidden">
                 {/* Top decorative gradient line */}
@@ -125,10 +125,10 @@ export default function Hero() {
                   <span className="text-sm font-medium text-neutral-darkest">Active Community</span>
                 </div>
               </div>
-            </ScrollAnimated>
+            </div>
 
             {/* Right: Hero Illustration with Animated Stats */}
-            <ScrollAnimated animation="slideRight" className="relative">
+            <div className="relative animate-fade-in">
               {/* Main illustration */}
               <div className="relative">
                 <Image
@@ -142,10 +142,7 @@ export default function Hero() {
               </div>
 
               {/* Floating Stats Cards with Animated Counters */}
-              <ScrollAnimated
-                animation="scaleIn"
-                className="absolute top-8 -left-8 bg-white/10 backdrop-blur-xl rounded-3xl p-6 border border-white/30 shadow-xl rounded-3xl p-6 shadow-xl"
-              >
+              <div className="absolute top-8 -left-8 bg-white/10 backdrop-blur-xl rounded-3xl p-6 border border-white/30 shadow-xl rounded-3xl p-6 shadow-xl animate-fade-in">
                 <div className="flex items-center space-x-3">
                   <div className="w-12 h-12 bg-gradient-to-br from-nature to-secondary rounded-2xl flex items-center justify-center">
                     <svg
@@ -166,12 +163,9 @@ export default function Hero() {
                     <AnimatedStat value={4} label={t('stats.programs')} />
                   </div>
                 </div>
-              </ScrollAnimated>
+              </div>
 
-              <ScrollAnimated
-                animation="scaleIn"
-                className="absolute bottom-16 -right-8 bg-white/10 backdrop-blur-xl rounded-3xl p-6 border border-white/30 shadow-xl rounded-3xl p-6 shadow-xl"
-              >
+              <div className="absolute bottom-16 -right-8 bg-white/10 backdrop-blur-xl rounded-3xl p-6 border border-white/30 shadow-xl rounded-3xl p-6 shadow-xl animate-fade-in">
                 <div className="flex items-center space-x-3">
                   <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-2xl flex items-center justify-center">
                     <svg
@@ -192,12 +186,9 @@ export default function Hero() {
                     <AnimatedStat value={100} label={t('stats.members')} suffix="+" />
                   </div>
                 </div>
-              </ScrollAnimated>
+              </div>
 
-              <ScrollAnimated
-                animation="scaleIn"
-                className="absolute top-1/2 -right-12 bg-white/10 backdrop-blur-xl rounded-3xl p-6 border border-white/30 shadow-xl rounded-3xl p-6 shadow-xl"
-              >
+              <div className="absolute top-1/2 -right-12 bg-white/10 backdrop-blur-xl rounded-3xl p-6 border border-white/30 shadow-xl rounded-3xl p-6 shadow-xl animate-fade-in">
                 <div className="flex items-center space-x-3">
                   <div className="w-12 h-12 bg-gradient-to-br from-secondary to-nature-light rounded-2xl flex items-center justify-center">
                     <svg
@@ -218,8 +209,8 @@ export default function Hero() {
                     <AnimatedStat value={4} label={t('stats.countries')} />
                   </div>
                 </div>
-              </ScrollAnimated>
-            </ScrollAnimated>
+              </div>
+            </div>
           </div>
         </div>
       </div>

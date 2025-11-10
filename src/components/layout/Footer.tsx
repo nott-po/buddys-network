@@ -8,7 +8,7 @@ import { FaTelegramPlane, FaFacebookF, FaInstagram } from 'react-icons/fa';
 
 export default function Footer() {
   const t = useTranslations('footer');
-  const CONTACT_EMAIL = process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? 'myfolderp@gmail.com';
+  const CONTACT_EMAIL = process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? 'fundacja@buddys.network';
   const currentYear = new Date().getFullYear();
 
   return (

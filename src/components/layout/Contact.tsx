@@ -26,31 +26,37 @@ export default function Contact() {
   };
 
   return (
-    <section className="py-24 bg-neutral-lightGray" id="contact">
+    <section
+      className="py-24 bg-gradient-to-br from-neutral-lightest via-white to-accent/10"
+      id="contact"
+    >
       <div className="container mx-auto px-4">
         <div className="max-w-7xl mx-auto">
           {/* Header */}
-          <div className="text-center max-w-3xl mx-auto mb-16">
+          <div className="text-center max-w-3xl mx-auto mb-16 animate-fade-in">
             <div className="inline-block px-4 py-2 bg-primary/10 rounded-full text-primary text-sm font-medium mb-6 border border-primary/20">
               {t('badge')}
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-neutral-darkGray mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-neutral-darkest mb-6">
               {t('title')}
             </h2>
-            <p className="text-lg text-neutral-gray">{t('subtitle')}</p>
+            <p className="text-lg text-neutral-dark">{t('subtitle')}</p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 mb-16">
             {/* Contact Form */}
-            <div className="bg-white/50 backdrop-blur-xl rounded-[40px] p-8 md:p-10 border border-white/40 shadow-xl">
-              <h3 className="text-2xl font-bold text-neutral-darkGray mb-6">{t('form.title')}</h3>
+            <div
+              className="bg-white/10 backdrop-blur-xl rounded-3xl p-6 border border-white/30 shadow-xl rounded-[40px] p-8 md:p-10 animate-fade-in"
+              style={{ animationDelay: '0.3s' }}
+            >
+              <h3 className="text-2xl font-bold text-neutral-darkest mb-6">{t('form.title')}</h3>
 
               <form onSubmit={handleSubmit} className="space-y-6">
                 {/* Name Input */}
                 <div>
                   <label
                     htmlFor="name"
-                    className="block text-sm font-medium text-neutral-darkGray mb-2"
+                    className="block text-sm font-medium text-neutral-darkest mb-2"
                   >
                     {t('form.name')}
                   </label>
@@ -61,7 +67,7 @@ export default function Contact() {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-white/50 backdrop-blur-xl border border-white/40 rounded-2xl focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
+                    className="w-full px-4 py-3 bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
                     placeholder={t('form.namePlaceholder')}
                   />
                 </div>
@@ -70,7 +76,7 @@ export default function Contact() {
                 <div>
                   <label
                     htmlFor="email"
-                    className="block text-sm font-medium text-neutral-darkGray mb-2"
+                    className="block text-sm font-medium text-neutral-darkest mb-2"
                   >
                     {t('form.email')}
                   </label>
@@ -81,7 +87,7 @@ export default function Contact() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-white/50 backdrop-blur-xl border border-white/40 rounded-2xl focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
+                    className="w-full px-4 py-3 bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
                     placeholder={t('form.emailPlaceholder')}
                   />
                 </div>
@@ -90,7 +96,7 @@ export default function Contact() {
                 <div>
                   <label
                     htmlFor="message"
-                    className="block text-sm font-medium text-neutral-darkGray mb-2"
+                    className="block text-sm font-medium text-neutral-darkest mb-2"
                   >
                     {t('form.message')}
                   </label>
@@ -101,15 +107,15 @@ export default function Contact() {
                     onChange={handleChange}
                     required
                     rows={5}
-                    className="w-full px-4 py-3 bg-white/50 backdrop-blur-xl border border-white/40 rounded-2xl focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all resize-none"
+                    className="w-full px-4 py-3 bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all resize-none"
                     placeholder={t('form.messagePlaceholder')}
                   />
                 </div>
 
-                {/* Submit Button */}
+                {/* Submit Button - Updated with new style */}
                 <button
                   type="submit"
-                  className="w-full px-8 py-4 bg-primary text-white font-medium rounded-full hover:bg-primary-dark transition-all hover:shadow-lg hover:scale-[1.02] group"
+                  className="w-full px-8 py-4 bg-gradient-to-r from-primary to-secondary text-white font-medium rounded-full hover:shadow-lg hover:scale-[1.02] transition-all duration-300 group"
                 >
                   <span className="flex items-center justify-center">
                     {t('form.submit')}
@@ -134,15 +140,18 @@ export default function Contact() {
             {/* Get Involved Cards */}
             <div className="space-y-6">
               {/* Telegram CTA */}
-              <div className="bg-white/50 backdrop-blur-xl rounded-3xl p-8 border border-white/40 hover:shadow-lg transition-all">
+              <div
+                className="bg-white/10 backdrop-blur-xl rounded-3xl p-6 border border-white/30 shadow-xl rounded-3xl p-8 hover:shadow-lg transition-all animate-fade-in"
+                style={{ animationDelay: '0.5s' }}
+              >
                 <div className="flex items-start space-x-4">
-                  <div className="w-14 h-14 bg-primary/20 backdrop-blur-xl rounded-2xl flex items-center justify-center border border-primary/30 flex-shrink-0">
-                    <svg className="w-7 h-7 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                  <div className="w-14 h-14 bg-gradient-to-br from-primary to-secondary rounded-2xl flex items-center justify-center flex-shrink-0">
+                    <svg className="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.295-.6.295-.002 0-.003 0-.005 0l.213-3.054 5.56-5.022c.24-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.924c-.64-.203-.658-.64.135-.954l11.566-4.458c.538-.196 1.006.128.832.941z" />
                     </svg>
                   </div>
                   <div className="flex-1">
-                    <h4 className="text-xl font-bold text-neutral-darkGray mb-2">
+                    <h4 className="text-xl font-bold text-neutral-darkest mb-2">
                       {t('telegram.title')}
                     </h4>
                     <p className="text-neutral-gray mb-4">{t('telegram.description')}</p>
@@ -150,7 +159,7 @@ export default function Contact() {
                       href="https://t.me/BuddysNetwork"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center px-6 py-3 bg-primary text-white font-medium rounded-full hover:bg-primary-dark transition-all hover:shadow-lg"
+                      className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-accent to-primary text-white font-medium rounded-full hover:shadow-lg hover:scale-105 transition-all duration-300"
                     >
                       {t('telegram.cta')}
                       <svg
@@ -172,11 +181,14 @@ export default function Contact() {
               </div>
 
               {/* Meeting Info */}
-              <div className="bg-white/50 backdrop-blur-xl rounded-3xl p-8 border border-white/40">
+              <div
+                className="bg-white/10 backdrop-blur-xl rounded-3xl p-6 border border-white/30 shadow-xl rounded-3xl p-8 animate-fade-in"
+                style={{ animationDelay: '0.7s' }}
+              >
                 <div className="flex items-start space-x-4">
-                  <div className="w-14 h-14 bg-secondary/20 backdrop-blur-xl rounded-2xl flex items-center justify-center border border-secondary/30 flex-shrink-0">
+                  <div className="w-14 h-14 bg-gradient-to-br from-secondary to-nature rounded-2xl flex items-center justify-center flex-shrink-0">
                     <svg
-                      className="w-7 h-7 text-secondary"
+                      className="w-7 h-7 text-white"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -190,7 +202,7 @@ export default function Contact() {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="text-xl font-bold text-neutral-darkGray mb-2">
+                    <h4 className="text-xl font-bold text-neutral-darkest mb-2">
                       {t('meetings.title')}
                     </h4>
                     <p className="text-neutral-gray">{t('meetings.description')}</p>
@@ -199,11 +211,14 @@ export default function Contact() {
               </div>
 
               {/* Email Contact */}
-              <div className="bg-white/50 backdrop-blur-xl rounded-3xl p-8 border border-white/40">
+              <div
+                className="bg-white/10 backdrop-blur-xl rounded-3xl p-6 border border-white/30 shadow-xl rounded-3xl p-8 animate-fade-in"
+                style={{ animationDelay: '0.9s' }}
+              >
                 <div className="flex items-start space-x-4">
-                  <div className="w-14 h-14 bg-primary-dark/20 backdrop-blur-xl rounded-2xl flex items-center justify-center border border-primary-dark/30 flex-shrink-0">
+                  <div className="w-14 h-14 bg-gradient-to-br from-nature to-secondary-dark rounded-2xl flex items-center justify-center flex-shrink-0">
                     <svg
-                      className="w-7 h-7 text-primary-dark"
+                      className="w-7 h-7 text-white"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -217,12 +232,12 @@ export default function Contact() {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="text-xl font-bold text-neutral-darkGray mb-2">
+                    <h4 className="text-xl font-bold text-neutral-darkest mb-2">
                       {t('email.title')}
                     </h4>
                     <a
                       href="mailto:info@buddys.network"
-                      className="text-primary hover:text-primary-dark transition-colors font-medium"
+                      className="text-primary hover:text-secondary transition-colors font-medium"
                     >
                       info@buddys.network
                     </a>
@@ -233,15 +248,15 @@ export default function Contact() {
           </div>
 
           {/* Social Media Links */}
-          <div className="text-center">
-            <h3 className="text-2xl font-bold text-neutral-darkGray mb-8">{t('social.title')}</h3>
+          <div className="text-center animate-fade-in" style={{ animationDelay: '1.1s' }}>
+            <h3 className="text-2xl font-bold text-neutral-darkest mb-8">{t('social.title')}</h3>
             <div className="flex justify-center space-x-4">
               {/* Telegram */}
               <a
                 href="https://t.me/BuddysNetwork"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-14 h-14 bg-white/50 backdrop-blur-xl hover:bg-primary rounded-2xl flex items-center justify-center transition-all border border-white/40 hover:scale-110 group"
+                className="w-14 h-14 bg-white/10 backdrop-blur-xl border border-white/20 hover:bg-gradient-to-br hover:from-primary hover:to-secondary rounded-2xl flex items-center justify-center transition-all duration-300 hover:scale-110 group"
                 aria-label="Telegram"
               >
                 <svg
@@ -256,7 +271,7 @@ export default function Contact() {
               {/* Facebook - Placeholder */}
               <a
                 href="#"
-                className="w-14 h-14 bg-white/50 backdrop-blur-xl hover:bg-primary rounded-2xl flex items-center justify-center transition-all border border-white/40 hover:scale-110 group"
+                className="w-14 h-14 bg-white/10 backdrop-blur-xl border border-white/20 hover:bg-gradient-to-br hover:from-accent hover:to-primary rounded-2xl flex items-center justify-center transition-all duration-300 hover:scale-110 group"
                 aria-label="Facebook"
               >
                 <svg
@@ -271,7 +286,7 @@ export default function Contact() {
               {/* Instagram - Placeholder */}
               <a
                 href="#"
-                className="w-14 h-14 bg-white/50 backdrop-blur-xl hover:bg-primary rounded-2xl flex items-center justify-center transition-all border border-white/40 hover:scale-110 group"
+                className="w-14 h-14 bg-white/10 backdrop-blur-xl border border-white/20 hover:bg-gradient-to-br hover:from-secondary hover:to-nature rounded-2xl flex items-center justify-center transition-all duration-300 hover:scale-110 group"
                 aria-label="Instagram"
               >
                 <svg
@@ -286,7 +301,7 @@ export default function Contact() {
               {/* LinkedIn - Placeholder */}
               <a
                 href="#"
-                className="w-14 h-14 bg-white/50 backdrop-blur-xl hover:bg-primary rounded-2xl flex items-center justify-center transition-all border border-white/40 hover:scale-110 group"
+                className="w-14 h-14 bg-white/10 backdrop-blur-xl border border-white/20 hover:bg-gradient-to-br hover:from-nature-dark hover:to-secondary-dark rounded-2xl flex items-center justify-center transition-all duration-300 hover:scale-110 group"
                 aria-label="LinkedIn"
               >
                 <svg

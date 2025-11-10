@@ -8,36 +8,39 @@ export default function Donation() {
 
   return (
     <section
-      className="py-24 bg-gradient-to-br from-primary/10 via-white to-secondary/10"
+      className="py-24 bg-gradient-to-br from-primary/5 via-white to-secondary/5"
       id="support"
     >
       <div className="container mx-auto px-4">
         <div className="max-w-7xl mx-auto">
           {/* Section Header */}
-          <div className="text-center max-w-3xl mx-auto mb-16">
+          <div className="text-center max-w-3xl mx-auto mb-16 animate-fade-in">
             <div className="inline-block px-4 py-2 bg-secondary/10 rounded-full text-secondary text-sm font-medium mb-6 border border-secondary/20">
               {t('badge')}
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-neutral-darkGray mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-neutral-darkest mb-6">
               {t('title')}
             </h2>
-            <p className="text-lg text-neutral-gray">{t('subtitle')}</p>
+            <p className="text-lg text-neutral-dark">{t('subtitle')}</p>
           </div>
 
           {/* Main CTA Card */}
-          <div className="relative mb-16">
+          <div className="relative mb-16 animate-fade-in" style={{ animationDelay: '0.3s' }}>
             {/* Decorative bg */}
-            <div className="absolute -top-6 -left-6 w-40 h-40 bg-primary/20 rounded-full blur-3xl"></div>
-            <div className="absolute -bottom-6 -right-6 w-48 h-48 bg-secondary/20 rounded-full blur-3xl"></div>
+            <div className="absolute -top-6 -left-6 w-40 h-40 bg-primary/10 rounded-full blur-3xl animate-float"></div>
+            <div
+              className="absolute -bottom-6 -right-6 w-48 h-48 bg-secondary/10 rounded-full blur-3xl animate-float"
+              style={{ animationDelay: '1s' }}
+            ></div>
 
-            <div className="relative bg-white/40 backdrop-blur-2xl rounded-[40px] p-10 md:p-12 border border-white/50 shadow-2xl">
+            <div className="relative bg-white/10 backdrop-blur-xl rounded-3xl p-6 border border-white/30 shadow-xl rounded-[40px] p-10 md:p-12">
               <div className="grid lg:grid-cols-2 gap-8 items-center">
                 {/* Message */}
                 <div>
-                  <h3 className="text-3xl md:text-4xl font-bold text-neutral-darkGray mb-6">
+                  <h3 className="text-3xl md:text-4xl font-bold text-neutral-darkest mb-6">
                     {t('main.title')}
                   </h3>
-                  <p className="text-lg text-neutral-gray leading-relaxed mb-6">
+                  <p className="text-lg text-neutral-dark leading-relaxed mb-6">
                     {t('main.description')}
                   </p>
                   <ul className="space-y-3 mb-8">
@@ -93,11 +96,11 @@ export default function Donation() {
                 </div>
 
                 {/* CTA */}
-                <div className="bg-white/60 backdrop-blur-xl rounded-3xl p-8 border border-white/50">
+                <div className="bg-white/10 backdrop-blur-xl rounded-3xl p-6 border border-white/30 shadow-xl rounded-3xl p-8">
                   <div className="text-center mb-6">
-                    <div className="w-20 h-20 bg-secondary/20 backdrop-blur-xl rounded-full flex items-center justify-center mx-auto mb-4 border border-secondary/30">
+                    <div className="w-20 h-20 bg-gradient-to-br from-secondary to-nature rounded-full flex items-center justify-center mx-auto mb-4">
                       <svg
-                        className="w-10 h-10 text-secondary"
+                        className="w-10 h-10 text-white"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -110,7 +113,7 @@ export default function Donation() {
                         />
                       </svg>
                     </div>
-                    <h4 className="text-2xl font-bold text-neutral-darkGray mb-2">
+                    <h4 className="text-2xl font-bold text-neutral-darkest mb-2">
                       {t('cta.title')}
                     </h4>
                     <p className="text-neutral-gray mb-6">{t('cta.description')}</p>
@@ -118,7 +121,7 @@ export default function Donation() {
 
                   <Link
                     href="mailto:info@buddys.network?subject=Support Buddy's Network"
-                    className="block w-full px-8 py-4 bg-secondary text-white font-semibold rounded-full hover:bg-secondary-dark transition-all hover:shadow-lg hover:scale-[1.02] text-center"
+                    className="block w-full px-8 py-4 bg-gradient-to-r from-secondary to-nature text-white font-semibold rounded-full hover:shadow-lg hover:scale-[1.02] transition-all duration-300 text-center"
                   >
                     {t('cta.button')}
                   </Link>
@@ -130,17 +133,20 @@ export default function Donation() {
           </div>
 
           {/* Ways to Support */}
-          <div>
-            <h3 className="text-3xl font-bold text-neutral-darkGray text-center mb-10">
+          <div className="animate-fade-in" style={{ animationDelay: '0.5s' }}>
+            <h3 className="text-3xl font-bold text-neutral-darkest text-center mb-10">
               {t('ways.title')}
             </h3>
 
             <div className="grid md:grid-cols-3 gap-6">
               {/* Volunteer */}
-              <div className="bg-white/50 backdrop-blur-xl rounded-3xl p-8 border border-white/40 hover:shadow-lg transition-all">
-                <div className="w-14 h-14 bg-primary/20 backdrop-blur-xl rounded-2xl flex items-center justify-center mb-6 border border-primary/30">
+              <div
+                className="bg-white/10 backdrop-blur-xl rounded-3xl p-6 border border-white/30 shadow-xl rounded-3xl p-8 hover:shadow-lg hover:scale-105 transition-all duration-300 animate-fade-in"
+                style={{ animationDelay: '0.7s' }}
+              >
+                <div className="w-14 h-14 bg-gradient-to-br from-primary to-accent rounded-2xl flex items-center justify-center mb-6">
                   <svg
-                    className="w-7 h-7 text-primary"
+                    className="w-7 h-7 text-white"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -153,7 +159,7 @@ export default function Donation() {
                     />
                   </svg>
                 </div>
-                <h4 className="text-xl font-bold text-neutral-darkGray mb-3">
+                <h4 className="text-xl font-bold text-neutral-darkest mb-3">
                   {t('ways.volunteer.title')}
                 </h4>
                 <p className="text-neutral-gray text-sm leading-relaxed mb-4">
@@ -161,7 +167,7 @@ export default function Donation() {
                 </p>
                 <Link
                   href="#contact"
-                  className="text-primary font-medium hover:text-primary-dark transition-colors inline-flex items-center"
+                  className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-primary/10 to-accent/10 text-primary font-medium rounded-full hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300"
                 >
                   {t('ways.volunteer.link')}
                   <svg
@@ -181,10 +187,13 @@ export default function Donation() {
               </div>
 
               {/* Share */}
-              <div className="bg-white/50 backdrop-blur-xl rounded-3xl p-8 border border-white/40 hover:shadow-lg transition-all">
-                <div className="w-14 h-14 bg-secondary/20 backdrop-blur-xl rounded-2xl flex items-center justify-center mb-6 border border-secondary/30">
+              <div
+                className="bg-white/10 backdrop-blur-xl rounded-3xl p-6 border border-white/30 shadow-xl rounded-3xl p-8 hover:shadow-lg hover:scale-105 transition-all duration-300 animate-fade-in"
+                style={{ animationDelay: '0.9s' }}
+              >
+                <div className="w-14 h-14 bg-gradient-to-br from-secondary to-nature rounded-2xl flex items-center justify-center mb-6">
                   <svg
-                    className="w-7 h-7 text-secondary"
+                    className="w-7 h-7 text-white"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -197,7 +206,7 @@ export default function Donation() {
                     />
                   </svg>
                 </div>
-                <h4 className="text-xl font-bold text-neutral-darkGray mb-3">
+                <h4 className="text-xl font-bold text-neutral-darkest mb-3">
                   {t('ways.share.title')}
                 </h4>
                 <p className="text-neutral-gray text-sm leading-relaxed mb-4">
@@ -207,7 +216,7 @@ export default function Donation() {
                   href="https://t.me/BuddysNetwork"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-secondary font-medium hover:text-secondary-dark transition-colors inline-flex items-center"
+                  className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-secondary/10 to-nature/10 text-secondary font-medium rounded-full hover:bg-gradient-to-r hover:from-secondary hover:to-nature hover:text-white transition-all duration-300"
                 >
                   {t('ways.share.link')}
                   <svg
@@ -227,10 +236,13 @@ export default function Donation() {
               </div>
 
               {/* Partner */}
-              <div className="bg-white/50 backdrop-blur-xl rounded-3xl p-8 border border-white/40 hover:shadow-lg transition-all">
-                <div className="w-14 h-14 bg-primary-dark/20 backdrop-blur-xl rounded-2xl flex items-center justify-center mb-6 border border-primary-dark/30">
+              <div
+                className="bg-white/10 backdrop-blur-xl rounded-3xl p-6 border border-white/30 shadow-xl rounded-3xl p-8 hover:shadow-lg hover:scale-105 transition-all duration-300 animate-fade-in"
+                style={{ animationDelay: '1.1s' }}
+              >
+                <div className="w-14 h-14 bg-gradient-to-br from-nature-dark to-secondary-dark rounded-2xl flex items-center justify-center mb-6">
                   <svg
-                    className="w-7 h-7 text-primary-dark"
+                    className="w-7 h-7 text-white"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -243,7 +255,7 @@ export default function Donation() {
                     />
                   </svg>
                 </div>
-                <h4 className="text-xl font-bold text-neutral-darkGray mb-3">
+                <h4 className="text-xl font-bold text-neutral-darkest mb-3">
                   {t('ways.partner.title')}
                 </h4>
                 <p className="text-neutral-gray text-sm leading-relaxed mb-4">
@@ -251,7 +263,7 @@ export default function Donation() {
                 </p>
                 <Link
                   href="mailto:info@buddys.network?subject=Partnership Inquiry"
-                  className="text-primary-dark font-medium hover:text-primary transition-colors inline-flex items-center"
+                  className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-nature-dark/10 to-secondary-dark/10 text-nature-dark font-medium rounded-full hover:bg-gradient-to-r hover:from-nature-dark hover:to-secondary-dark hover:text-white transition-all duration-300"
                 >
                   {t('ways.partner.link')}
                   <svg
@@ -273,6 +285,13 @@ export default function Donation() {
           </div>
         </div>
       </div>
+
+      {/* Decorative floating elements */}
+      <div className="absolute top-32 left-8 w-24 h-24 bg-nature/5 rounded-full blur-2xl animate-float"></div>
+      <div
+        className="absolute bottom-32 right-8 w-32 h-32 bg-secondary/5 rounded-full blur-3xl animate-float"
+        style={{ animationDelay: '2s' }}
+      ></div>
     </section>
   );
 }

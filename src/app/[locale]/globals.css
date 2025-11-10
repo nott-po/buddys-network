@@ -1,29 +1,42 @@
 @import 'tailwindcss';
 
 @theme {
-  /* Primary Colors */
-  --color-primary: #4a90a4;
-  --color-primary-light: #87ceeb;
-  --color-primary-dark: #2c5f6f;
+  /* Primary Colors - Updated based on illustrations */
+  --color-primary: #4a90a4; /* Teal blue from illustrations */
+  --color-primary-light: #7bb3c0; /* Lighter teal */
+  --color-primary-dark: #2c5f6f; /* Darker teal */
 
-  /* Secondary Colors */
-  --color-secondary: #7cb342;
-  --color-secondary-light: #aed581;
-  --color-secondary-dark: #558b2f;
+  /* Secondary Colors - Fresh greens from illustrations */
+  --color-secondary: #8fbc8f; /* Sage green */
+  --color-secondary-light: #b8d4b8; /* Light sage */
+  --color-secondary-dark: #5f8a5f; /* Dark sage */
+
+  /* Accent Colors - From illustrations */
+  --color-accent: #87ceeb; /* Sky blue */
+  --color-accent-light: #b8e0f5; /* Light sky blue */
+  --color-accent-dark: #4682b4; /* Steel blue */
+
+  /* Nature Colors - Additional greens from illustrations */
+  --color-nature: #9acd32; /* Yellow green */
+  --color-nature-light: #c1e055; /* Light yellow green */
+  --color-nature-dark: #6b8e23; /* Olive drab */
 
   /* Neutral Colors */
   --color-neutral-white: #ffffff;
-  --color-neutral-lightGray: #f8f9fa;
+  --color-neutral-lightest: #f8f9fa;
+  --color-neutral-light: #e9ecef;
   --color-neutral-gray: #6c757d;
-  --color-neutral-darkGray: #343a40;
+  --color-neutral-dark: #495057;
+  --color-neutral-darkest: #212529;
   --color-neutral-black: #000000;
 
   /* Font Family */
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
 
-  /* Animations */
-  --ease-out: cubic-bezier(0.33, 1, 0.68, 1);
-  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  /* Updated Animations */
+  --ease-out: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
 /* Smooth Scrolling */
@@ -38,24 +51,26 @@ section[id] {
 
 /* Base Styles */
 body {
-  @apply bg-neutral-white text-neutral-darkGray antialiased;
+  @apply bg-neutral-white text-neutral-darkest antialiased;
   font-family: var(--font-sans);
 }
 
-/* Custom Animations */
+/* Enhanced Animations */
 @keyframes fadeIn {
   from {
     opacity: 0;
+    transform: translateY(10px);
   }
   to {
     opacity: 1;
+    transform: translateY(0);
   }
 }
 
 @keyframes slideUp {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(30px);
   }
   to {
     opacity: 1;
@@ -63,29 +78,83 @@ body {
   }
 }
 
-@keyframes bounce {
+@keyframes float {
   0%,
   100% {
-    transform: translateY(0);
+    transform: translateY(0px);
   }
   50% {
     transform: translateY(-10px);
   }
 }
 
+@keyframes pulse-grow {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes gentle-bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
 .animate-fade-in {
-  animation: fadeIn 0.6s var(--ease-out);
+  animation: fadeIn 0.8s var(--ease-out);
 }
 
 .animate-slide-up {
-  animation: slideUp 0.6s var(--ease-out);
+  animation: slideUp 0.8s var(--ease-out);
 }
 
-.animate-bounce {
-  animation: bounce 2s infinite;
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-pulse-grow {
+  animation: pulse-grow 2s ease-in-out infinite;
+}
+
+.animate-gentle-bounce {
+  animation: gentle-bounce 2s ease-in-out infinite;
 }
 
 /* Utility Classes */
 .text-balance {
   text-wrap: balance;
+}
+
+/* Glass morphism utilities */
+.glass {
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* Gradient backgrounds */
+.bg-nature-gradient {
+  background: linear-gradient(135deg, var(--color-nature-light), var(--color-secondary));
+}
+
+.bg-ocean-gradient {
+  background: linear-gradient(135deg, var(--color-accent-light), var(--color-primary));
+}
+
+.bg-sage-gradient {
+  background: linear-gradient(135deg, var(--color-secondary-light), var(--color-secondary-dark));
 }

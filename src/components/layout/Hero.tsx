@@ -3,36 +3,38 @@
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import Image from 'next/image';
+import { AnimatedStat, ScrollAnimated } from '../../hooks/useScrollAnimations';
 
 export default function Hero() {
   const t = useTranslations('hero');
 
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden pt-20" id="hero">
-      {/* Background Image */}
-      <div className="absolute inset-0 -z-20">
-        <Image
-          src="/images/hero-bg22.jpg"
-          alt="Hero Background"
-          fill
-          className="object-cover"
-          priority
-        />
+    <section
+      className="relative min-h-screen flex items-center overflow-hidden pt-20 bg-gradient-to-br from-neutral-lightest via-white to-accent-light/20"
+      id="hero"
+    >
+      {/* Floating decorative elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-nature/10 rounded-full blur-3xl animate-float"></div>
+        <div
+          className="absolute top-3/4 right-1/4 w-48 h-48 bg-secondary/10 rounded-full blur-3xl animate-float"
+          style={{ animationDelay: '1s' }}
+        ></div>
+        <div
+          className="absolute top-1/2 left-1/6 w-24 h-24 bg-accent/10 rounded-full blur-2xl animate-float"
+          style={{ animationDelay: '2s' }}
+        ></div>
       </div>
 
-      <div className="container mx-auto px-4 py-20">
+      <div className="container mx-auto px-4 py-20 relative z-10">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left: Enhanced Main Content Card */}
-            <div className="relative">
-              {/* Decorative Elements */}
-              <div className="absolute -top-6 -left-6 w-32 h-32 bg-primary/20 rounded-full blur-3xl"></div>
-              <div className="absolute -bottom-6 -right-6 w-40 h-40 bg-secondary/20 rounded-full blur-3xl"></div>
-
-              {/* Main Glass Card */}
-              <div className="relative bg-white/20 backdrop-blur-2xl rounded-[40px] p-10 md:p-12 shadow-2xl border border-white/40 overflow-hidden">
-                {/* Top decorative line */}
-                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-secondary to-primary-dark"></div>
+            <ScrollAnimated animation="slideLeft" className="relative">
+              {/* Main bg-white/10 backdrop-blur-xl border border-white/20 Card */}
+              <div className="relative bg-white/10 backdrop-blur-xl rounded-3xl p-6 border border-white/30 shadow-xl rounded-[40px] p-10 md:p-12 shadow-2xl overflow-hidden">
+                {/* Top decorative gradient line */}
+                <div className="absolute top-0 left-0 right-0 h-1 bg-nature-gradient"></div>
 
                 {/* Badge with icon */}
                 <div className="inline-flex items-center space-x-2 px-4 py-2 bg-white/40 backdrop-blur-xl rounded-full text-primary text-sm font-medium mb-6 border border-white/50">
@@ -57,25 +59,23 @@ export default function Hero() {
                   />
                 </div>
 
-                {/* Title with gradient */}
+                {/* Title with new gradient */}
                 <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-                  <span className="bg-gradient-to-r from-primary via-primary-dark to-secondary bg-clip-text text-transparent">
-                    Buddy's
+                  <span className="bg-gradient-to-r from-primary via-secondary to-nature bg-clip-text text-transparent">
+                    Buddy&#39;s
                   </span>
                   <br />
-                  <span className="text-neutral-darkGray">Network</span>
+                  <span className="text-neutral-darkest">Network</span>
                 </h1>
 
                 {/* Description */}
-                <p className="text-lg text-neutral-darkGray/80 leading-relaxed mb-8">
-                  {t('description')}
-                </p>
+                <p className="text-lg text-neutral-dark leading-relaxed mb-8">{t('description')}</p>
 
                 {/* CTA Buttons */}
                 <div className="flex flex-wrap gap-4">
                   <Link
                     href="#programs"
-                    className="inline-flex items-center px-8 py-4 bg-primary text-white font-medium rounded-full hover:bg-primary-dark transition-all hover:shadow-lg hover:scale-105 group"
+                    className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-primary to-secondary text-white font-medium rounded-full hover:shadow-lg hover:scale-105 transition-all duration-300 group"
                   >
                     {t('cta')}
                     <svg
@@ -95,11 +95,11 @@ export default function Hero() {
 
                   <Link
                     href="#about"
-                    className="inline-flex items-center px-8 py-4 bg-white/40 backdrop-blur-xl text-neutral-darkGray font-medium rounded-full hover:bg-white/60 transition-all border border-white/50 group"
+                    className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-xl border border-white/20 rounded-full text-neutral-darkest font-medium hover:bg-white/20 transition-all duration-300 group"
                   >
                     Learn More
                     <svg
-                      className="w-5 h-5 ml-2"
+                      className="w-5 h-5 ml-2 group-hover:translate-y-1 transition-transform"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -115,32 +115,41 @@ export default function Hero() {
                 </div>
 
                 {/* Bottom decorative element */}
-                <div className="absolute bottom-0 right-0 w-32 h-32 bg-gradient-to-tl from-primary/10 to-transparent rounded-tl-full"></div>
+                <div className="absolute bottom-0 right-0 w-32 h-32 bg-gradient-to-tl from-secondary/10 to-transparent rounded-tl-full"></div>
               </div>
 
               {/* Floating mini badges */}
-              <div className="absolute -top-4 right-8 bg-white/25 backdrop-blur-xl px-4 py-2 rounded-full border border-white/40 shadow-lg">
+              <div className="absolute -top-4 right-8 bg-white/10 backdrop-blur-xl border border-white/20 px-4 py-2 rounded-full shadow-lg animate-gentle-bounce">
                 <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                  <span className="text-sm font-medium text-white">Active Now</span>
+                  <div className="w-2 h-2 bg-nature rounded-full animate-pulse"></div>
+                  <span className="text-sm font-medium text-neutral-darkest">Active Community</span>
                 </div>
               </div>
-            </div>
+            </ScrollAnimated>
 
-            {/* Right: Floating Stats Cards - Keep as is */}
-            <div className="space-y-4">
-              {/* Programs Card */}
-              <div className="bg-white/15 backdrop-blur-xl rounded-3xl p-8 shadow-2xl border border-white/30 hover:shadow-2xl transition-all hover:-translate-y-1">
-                <div className="flex items-center justify-between">
-                  <div>
-                    <div className="text-5xl font-bold text-white drop-shadow-lg mb-2">04</div>
-                    <div className="text-white/90 font-medium drop-shadow-md">
-                      {t('stats.programs')}
-                    </div>
-                  </div>
-                  <div className="w-16 h-16 bg-white/25 backdrop-blur-xl rounded-2xl flex items-center justify-center border border-white/40">
+            {/* Right: Hero Illustration with Animated Stats */}
+            <ScrollAnimated animation="slideRight" className="relative">
+              {/* Main illustration */}
+              <div className="relative">
+                <Image
+                  src="/images/illustrations/hero.png"
+                  alt="Community Growth Illustration"
+                  width={600}
+                  height={600}
+                  className="w-full h-auto animate-float"
+                  priority
+                />
+              </div>
+
+              {/* Floating Stats Cards with Animated Counters */}
+              <ScrollAnimated
+                animation="scaleIn"
+                className="absolute top-8 -left-8 bg-white/10 backdrop-blur-xl rounded-3xl p-6 border border-white/30 shadow-xl rounded-3xl p-6 shadow-xl"
+              >
+                <div className="flex items-center space-x-3">
+                  <div className="w-12 h-12 bg-gradient-to-br from-nature to-secondary rounded-2xl flex items-center justify-center">
                     <svg
-                      className="w-8 h-8 text-white drop-shadow-md"
+                      className="w-6 h-6 text-white"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -153,21 +162,20 @@ export default function Hero() {
                       />
                     </svg>
                   </div>
-                </div>
-              </div>
-
-              {/* Members Card */}
-              <div className="bg-white/15 backdrop-blur-xl rounded-3xl p-8 shadow-2xl border border-white/30 hover:shadow-2xl transition-all hover:-translate-y-1">
-                <div className="flex items-center justify-between">
                   <div>
-                    <div className="text-5xl font-bold text-white drop-shadow-lg mb-2">100+</div>
-                    <div className="text-white/90 font-medium drop-shadow-md">
-                      {t('stats.members')}
-                    </div>
+                    <AnimatedStat value={4} label={t('stats.programs')} />
                   </div>
-                  <div className="w-16 h-16 bg-white/25 backdrop-blur-xl rounded-2xl flex items-center justify-center border border-white/40">
+                </div>
+              </ScrollAnimated>
+
+              <ScrollAnimated
+                animation="scaleIn"
+                className="absolute bottom-16 -right-8 bg-white/10 backdrop-blur-xl rounded-3xl p-6 border border-white/30 shadow-xl rounded-3xl p-6 shadow-xl"
+              >
+                <div className="flex items-center space-x-3">
+                  <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-2xl flex items-center justify-center">
                     <svg
-                      className="w-8 h-8 text-white drop-shadow-md"
+                      className="w-6 h-6 text-white"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -180,21 +188,20 @@ export default function Hero() {
                       />
                     </svg>
                   </div>
-                </div>
-              </div>
-
-              {/* Countries Card */}
-              <div className="bg-white/15 backdrop-blur-xl rounded-3xl p-8 shadow-2xl border border-white/30 hover:shadow-2xl transition-all hover:-translate-y-1">
-                <div className="flex items-center justify-between">
                   <div>
-                    <div className="text-5xl font-bold text-white drop-shadow-lg mb-2">04</div>
-                    <div className="text-white/90 font-medium drop-shadow-md">
-                      {t('stats.countries')}
-                    </div>
+                    <AnimatedStat value={100} label={t('stats.members')} suffix="+" />
                   </div>
-                  <div className="w-16 h-16 bg-white/25 backdrop-blur-xl rounded-2xl flex items-center justify-center border border-white/40">
+                </div>
+              </ScrollAnimated>
+
+              <ScrollAnimated
+                animation="scaleIn"
+                className="absolute top-1/2 -right-12 bg-white/10 backdrop-blur-xl rounded-3xl p-6 border border-white/30 shadow-xl rounded-3xl p-6 shadow-xl"
+              >
+                <div className="flex items-center space-x-3">
+                  <div className="w-12 h-12 bg-gradient-to-br from-secondary to-nature-light rounded-2xl flex items-center justify-center">
                     <svg
-                      className="w-8 h-8 text-white drop-shadow-md"
+                      className="w-6 h-6 text-white"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -207,9 +214,12 @@ export default function Hero() {
                       />
                     </svg>
                   </div>
+                  <div>
+                    <AnimatedStat value={4} label={t('stats.countries')} />
+                  </div>
                 </div>
-              </div>
-            </div>
+              </ScrollAnimated>
+            </ScrollAnimated>
           </div>
         </div>
       </div>

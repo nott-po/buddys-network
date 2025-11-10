@@ -1,0 +1,218 @@
+{
+  "navigation": {
+    "home": "Strona główna",
+    "about": "O nas",
+    "programs": "Programy",
+    "events": "Wydarzenia",
+    "contact": "Kontakt",
+    "language": "Język"
+  },
+  "hero": {
+    "badge": "Fundacja Wsparcia Młodzieży",
+    "title": "Buddy's Network",
+    "description": "Tworzymy społeczność młodych, ambitnych ludzi dążących do rozwoju, gdzie każdy może być zarówno mentorem, jak i uczniem.",
+    "cta": "Dołącz do nas",
+    "stats": {
+      "programs": "Programy",
+      "members": "Członków",
+      "countries": "Kraje"
+    }
+  },
+  "programs": {
+    "title": "Nasze Programy",
+    "subtitle": "Wspieramy młodzież poprzez różnorodne inicjatywy edukacyjne i społeczne",
+    "learnMore": "Dowiedz się więcej",
+    "categories": {
+      "all": "Wszystkie Programy",
+      "education": "Edukacja",
+      "community": "Społeczność",
+      "events": "Wydarzenia"
+    },
+    "scholarships": {
+      "title": "Stypendia",
+      "description": "Wspieramy talentowaną młodzież z krajów Europy Wschodniej poprzez stypendia edukacyjne dla studentów z rodzin o niskich dochodach."
+    },
+    "peerGroups": {
+      "title": "Grupy wsparcia",
+      "description": "Małe grupy do 10 osób, które spotykają się regularnie, aby dzielić się doświadczeniami i wspólnie rozwiązywać wyzwania."
+    },
+    "openEvents": {
+      "title": "Otwarte wydarzenia",
+      "description": "Organizujemy lekcie, warsztaty i spotkania z inspirującymi prelegentami na tematy rozwoju osobistego i zawodowego."
+    },
+    "clubActivities": {
+      "title": "Działalność klubowa",
+      "description": "Nieformalne wydarzenia, gry edukacyjne i spotkania integracyjne dla uczestników naszej społeczności."
+    }
+  },
+  "about": {
+    "badge": "O Fundacji",
+    "title": "Wizja, która się rozwija",
+    "description": "Buddy's Network powstało z pasji i wizji naszego założyciela, który wierzył, że młodzi ludzie potrzebują przestrzeni do wzajemnego wsparcia i rozwoju. To dzięki jego inicjatywie powstała społeczność, która łączy osoby z różnych krajów i środowisk.",
+    "mission": "Zaczynaliśmy jako mała grupa znajomych w Warszawie. Dziś rozwijamy się, planując nowe formaty spotkań i otwierając się na polsko i anglojęzyczną społeczność. Nasza droga pokazuje, że wielkie rzeczy zaczynają się od małych kroków i silnej wizji.",
+    "imageCaption": "Dzięki założycielowi - razem tworzymy przyszłość",
+    "stats": {
+      "programs": "4",
+      "programsLabel": "Kierunki rozwoju",
+      "countries": "3+",
+      "countriesLabel": "Narodowości",
+      "members": "Rośniemy",
+      "membersLabel": "Nasza społeczność"
+    },
+    "valuesTitle": "Co Nas Napędza",
+    "values": {
+      "growth": {
+        "title": "Wzajemny Rozwój",
+        "description": "Każdy z nas wnosi coś wartościowego - jesteśmy zarówno nauczycielami, jak i uczniami"
+      },
+      "support": {
+        "title": "Autentyczne Wsparcie",
+        "description": "Tworzymy bezpieczną przestrzeń, gdzie można dzielić się wyzwaniami i sukcesami"
+      },
+      "community": {
+        "title": "Prawdziwa Społeczność",
+        "description": "Łączymy ludzi z różnych krajów i środowisk wokół wspólnych celów"
+      },
+      "opportunity": {
+        "title": "Nowe Możliwości",
+        "description": "Otwieramy drzwi do kontaktów, wiedzy i doświadczeń, które zmieniają życie"
+      }
+    }
+  },
+  "footer": {
+    "description": "Fundacja wspierająca rozwój młodzieży poprzez stypendia, grupy wsparcia i otwarte wydarzenia edukacyjne.",
+    "quickLinks": "Szybkie linki",
+    "about": "O nas",
+    "programs": "Programy",
+    "events": "Wydarzenia",
+    "contact": "Kontakt",
+    "ourPrograms": "Nasze programy",
+    "scholarships": "Stypendia",
+    "peerGroups": "Grupy wsparcia",
+    "openEvents": "Otwarte wydarzenia",
+    "clubActivities": "Działalność klubowa",
+    "connect": "Kontakt",
+    "rights": "Wszelkie prawa zastrzeżone.",
+    "privacy": "Polityka prywatności",
+    "terms": "Regulamin"
+  },
+  "events": {
+    "badge": "Nasze Spotkania",
+    "title": "Wydarzenia i Spotkania",
+    "subtitle": "Regularnie spotykamy się, aby rozwijać się razem, dzielić doświadczeniami i budować społeczność",
+    "regular": {
+      "title": "Spotkania co dwa tygodnie",
+      "description": "Nasze grupy wsparcia spotykają się regularnie. Każde spotkanie to okazja do rozmowy, wymiany doświadczeń i wspólnego rozwiązywania wyzwań.",
+      "cta": "Dołącz do Telegram"
+    },
+    "upcoming": {
+      "label": "Nadchodzące"
+    },
+    "psychologist": {
+      "title": "Spotkanie z Psychologiem",
+      "description": "Zapraszamy na warsztaty o zdrowiu psychicznym, radzeniu sobie ze stresem i budowaniu odporności emocjonalnej.",
+      "date": "Wkrótce",
+      "time": "Do ustalenia"
+    },
+    "past": {
+      "label": "Zakończone"
+    },
+    "financial": {
+      "title": "Finansowa Gramotność",
+      "description": "Warsztaty o podstawach zarządzania finansami osobistymi, oszczędzaniu i inwestowaniu dla młodych ludzi.",
+      "status": "Wydarzenie zakończone"
+    },
+    "future": {
+      "title": "Nadchodzące Tematy",
+      "description": "Planujemy kolejne spotkania. Co Cię interesuje?",
+      "idea1": "Rozwój kariery",
+      "idea2": "Networking",
+      "idea3": "Work-life balance"
+    }
+  },
+  "founder": {
+    "badge": "Nasz Założyciel",
+    "title": "Wizja Buddy's Network",
+    "subtitle": "Historia, która zainspirowała do stworzenia społeczności wsparcia dla młodych ludzi",
+    "role": "Założyciel i Wizjoner",
+    "journey": {
+      "title": "Osobiste Doświadczenie",
+      "description": "Wład sam studiował w Polsce jako student zagraniczny i doskonale rozumie wyzwania, z jakimi mierzą się młodzi ludzie z innych krajów. Ta osobista historia pokazała mu, jak ważne jest wsparcie i społeczność."
+    },
+    "inspiration": {
+      "title": "Inspiracja od Syna",
+      "description": "Największą inspiracją do stworzenia fundacji był jego syn. Obserwując jego rozwój i potencjał, Wład zrozumiał, jak ważne jest stworzenie przestrzeni, gdzie młodzi ludzie mogą wzajemnie się wspierać i rozwijać."
+    },
+    "vision": {
+      "title": "Misja Buddy's Network",
+      "description": "Jego celem jest stworzenie miejsca, gdzie młodzi ludzie mogą uczyć się czegoś nowego, dzielić się wiedzą i doświadczeniami, oraz budować trwałe relacje. Każdy może być zarówno uczniem, jak i nauczycielem."
+    },
+    "quote": "Największą wartością jest społeczność, w której każdy może się rozwijać i jednocześnie pomagać innym w ich drodze"
+  },
+  "contact": {
+    "badge": "Skontaktuj się",
+    "title": "Dołącz do Buddy's Network",
+    "subtitle": "Zostań częścią naszej społeczności lub skontaktuj się z nami",
+    "form": {
+      "title": "Wyślij wiadomość",
+      "name": "Imię",
+      "namePlaceholder": "Twoje imię",
+      "email": "Email",
+      "emailPlaceholder": "twoj@email.com",
+      "message": "Wiadomość",
+      "messagePlaceholder": "Jak możemy Ci pomóc?",
+      "submit": "Wyślij wiadomość"
+    },
+    "telegram": {
+      "title": "Dołącz na Telegram",
+      "description": "Najszybszy sposób, aby dołączyć do naszej społeczności i otrzymywać aktualizacje o spotkaniach.",
+      "cta": "Dołącz teraz"
+    },
+    "meetings": {
+      "title": "Spotkania co 2 tygodnie",
+      "description": "Regularnie spotykamy się w małych grupach. Każdy jest mile widziany!"
+    },
+    "email": {
+      "title": "Email"
+    },
+    "social": {
+      "title": "Śledź nas w mediach społecznościowych"
+    }
+  },
+  "donation": {
+    "badge": "Wesprzyj Nas",
+    "title": "Pomóż Nam Rozwijać Społeczność",
+    "subtitle": "Twoje wsparcie pozwala nam organizować więcej spotkań i rozwijać programy dla młodzieży",
+    "main": {
+      "title": "Dlaczego Twoje Wsparcie Jest Ważne",
+      "description": "Jako rozwijająca się fundacja, każde wsparcie pomaga nam realizować naszą misję tworzenia przestrzeni dla rozwoju młodych ludzi.",
+      "point1": "Organizacja regularnych spotkań i warsztatów",
+      "point2": "Rozwój programów edukacyjnych i peer-to-peer grup",
+      "point3": "Przyszłe stypendia dla talentowanej młodzieży"
+    },
+    "cta": {
+      "title": "Zostań Wspierającym",
+      "description": "Skontaktuj się z nami, aby dowiedzieć się więcej o możliwościach wsparcia",
+      "button": "Skontaktuj się z nami",
+      "note": "Pracujemy nad uruchomieniem różnych form wsparcia"
+    },
+    "ways": {
+      "title": "Inne Sposoby Wsparcia",
+      "volunteer": {
+        "title": "Zostań Wolontariuszem",
+        "description": "Podziel się swoją wiedzą prowadząc warsztaty lub pomagając w organizacji wydarzeń.",
+        "link": "Zgłoś się"
+      },
+      "share": {
+        "title": "Opowiedz o Nas",
+        "description": "Pomóż nam dotrzeć do większej liczby młodych ludzi, którzy mogą skorzystać z naszej społeczności.",
+        "link": "Udostępnij"
+      },
+      "partner": {
+        "title": "Współpraca Biznesowa",
+        "description": "Jesteś firmą zainteresowaną wsparciem młodzieży? Porozmawiajmy o partnerstwie.",
+        "link": "Napisz do nas"
+      }
+    }
+  }
+}

@@ -1,0 +1,218 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "programs": "Programs",
+    "events": "Events",
+    "contact": "Contact",
+    "language": "Language"
+  },
+  "hero": {
+    "badge": "Youth Support Foundation",
+    "title": "Buddy's Network",
+    "description": "A growing community of young people in Warsaw, where everyone can be both a mentor and a student. We create a space for mutual support and development.",
+    "cta": "Join us",
+    "stats": {
+      "programs": "Programs",
+      "members": "Participants",
+      "countries": "Countries"
+    }
+  },
+  "programs": {
+    "title": "Our Programs",
+    "subtitle": "Supporting youth development through regular meetings, workshops and experience exchange",
+    "learnMore": "Learn more",
+    "categories": {
+      "all": "All Programs",
+      "education": "Education",
+      "community": "Community",
+      "events": "Events"
+    },
+    "scholarships": {
+      "title": "Scholarships",
+      "description": "We're planning a scholarship program for talented youth from Eastern Europe. Currently working on securing funding and partners."
+    },
+    "peerGroups": {
+      "title": "Peer Groups",
+      "description": "Regular meetings of small groups (up to 10 people) twice a month. We share experiences, support each other and solve challenges together."
+    },
+    "openEvents": {
+      "title": "Open Events",
+      "description": "We organize lectures, workshops and meetings with inspiring speakers on personal and professional development topics."
+    },
+    "clubActivities": {
+      "title": "Club Activities",
+      "description": "Informal events and educational games (Cashflow, Mafia) for our community integration."
+    }
+  },
+  "about": {
+    "badge": "About Foundation",
+    "title": "A vision that's growing",
+    "description": "Buddy's Network was born from the passion and vision of our founder, who believed that young people need a space for mutual support and growth. Thanks to his initiative, we've created a community connecting people from different countries and backgrounds.",
+    "mission": "We started as a small group of friends in Warsaw. Today we're growing, planning new meeting formats and opening up to Polish and English-speaking communities. Our journey shows that great things start with small steps and a strong vision.",
+    "imageCaption": "Thanks to our founder - together we create the future",
+    "stats": {
+      "programs": "4",
+      "programsLabel": "Growth directions",
+      "countries": "3+",
+      "countriesLabel": "Nationalities",
+      "members": "Growing",
+      "membersLabel": "Our community"
+    },
+    "valuesTitle": "What Drives Us",
+    "values": {
+      "growth": {
+        "title": "Mutual Growth",
+        "description": "Each of us brings something valuable - we are both teachers and students"
+      },
+      "support": {
+        "title": "Authentic Support",
+        "description": "We create a safe space where people can share challenges and successes"
+      },
+      "community": {
+        "title": "Real Community",
+        "description": "We connect people from different countries and backgrounds around shared goals"
+      },
+      "opportunity": {
+        "title": "New Opportunities",
+        "description": "We open doors to connections, knowledge and experiences that change lives"
+      }
+    }
+  },
+  "footer": {
+    "description": "A young foundation from Warsaw supporting youth development through peer-to-peer groups and open events.",
+    "quickLinks": "Quick Links",
+    "about": "About",
+    "programs": "Programs",
+    "events": "Events",
+    "contact": "Contact",
+    "ourPrograms": "Our Programs",
+    "scholarships": "Scholarships (planned)",
+    "peerGroups": "Peer Groups",
+    "openEvents": "Open Events",
+    "clubActivities": "Club Activities",
+    "connect": "Connect",
+    "rights": "All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  },
+  "events": {
+    "badge": "Our Meetings",
+    "title": "Events & Meetings",
+    "subtitle": "We meet regularly to grow together, share experiences, and build community",
+    "regular": {
+      "title": "Bi-Weekly Meetings",
+      "description": "Our peer groups meet regularly. Each meeting is an opportunity for conversation, experience sharing, and solving challenges together.",
+      "cta": "Join Telegram"
+    },
+    "upcoming": {
+      "label": "Upcoming"
+    },
+    "psychologist": {
+      "title": "Meeting with Psychologist",
+      "description": "Join us for a workshop on mental health, stress management, and building emotional resilience.",
+      "date": "Coming Soon",
+      "time": "TBD"
+    },
+    "past": {
+      "label": "Past"
+    },
+    "financial": {
+      "title": "Financial Literacy",
+      "description": "Workshop on personal finance basics, saving, and investing for young people.",
+      "status": "Event completed"
+    },
+    "future": {
+      "title": "Upcoming Topics",
+      "description": "We're planning more meetings. What interests you?",
+      "idea1": "Career Development",
+      "idea2": "Networking",
+      "idea3": "Work-Life Balance"
+    }
+  },
+  "founder": {
+    "badge": "Our Founder",
+    "title": "The Vision of Buddy's Network",
+    "subtitle": "The story that inspired the creation of a support community for young people",
+    "role": "Founder & Visionary",
+    "journey": {
+      "title": "Personal Experience",
+      "description": "Wład himself studied in Poland as an international student and perfectly understands the challenges young people from other countries face. This personal story showed him how important support and community are."
+    },
+    "inspiration": {
+      "title": "Inspiration from His Son",
+      "description": "His greatest inspiration for creating the foundation was his son. Observing his growth and potential, Wład understood how important it is to create a space where young people can support and develop each other."
+    },
+    "vision": {
+      "title": "Buddy's Network Mission",
+      "description": "His goal is to create a place where young people can learn something new, share knowledge and experiences, and build lasting relationships. Everyone can be both a student and a teacher."
+    },
+    "quote": "The greatest value is a community where everyone can grow while helping others on their journey"
+  },
+  "contact": {
+    "badge": "Get in Touch",
+    "title": "Join Buddy's Network",
+    "subtitle": "Become part of our community or get in touch with us",
+    "form": {
+      "title": "Send a Message",
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "emailPlaceholder": "your@email.com",
+      "message": "Message",
+      "messagePlaceholder": "How can we help you?",
+      "submit": "Send Message"
+    },
+    "telegram": {
+      "title": "Join on Telegram",
+      "description": "The fastest way to join our community and receive updates about meetings.",
+      "cta": "Join Now"
+    },
+    "meetings": {
+      "title": "Bi-weekly Meetings",
+      "description": "We meet regularly in small groups. Everyone is welcome!"
+    },
+    "email": {
+      "title": "Email"
+    },
+    "social": {
+      "title": "Follow us on social media"
+    }
+  },
+  "donation": {
+    "badge": "Support Us",
+    "title": "Help Us Grow the Community",
+    "subtitle": "Your support allows us to organize more meetings and develop programs for young people",
+    "main": {
+      "title": "Why Your Support Matters",
+      "description": "As a growing foundation, every contribution helps us fulfill our mission of creating space for young people's development.",
+      "point1": "Organizing regular meetings and workshops",
+      "point2": "Developing educational programs and peer-to-peer groups",
+      "point3": "Future scholarships for talented youth"
+    },
+    "cta": {
+      "title": "Become a Supporter",
+      "description": "Contact us to learn more about support opportunities",
+      "button": "Contact Us",
+      "note": "We're working on launching various forms of support"
+    },
+    "ways": {
+      "title": "Other Ways to Support",
+      "volunteer": {
+        "title": "Become a Volunteer",
+        "description": "Share your knowledge by leading workshops or helping organize events.",
+        "link": "Apply"
+      },
+      "share": {
+        "title": "Spread the Word",
+        "description": "Help us reach more young people who could benefit from our community.",
+        "link": "Share"
+      },
+      "partner": {
+        "title": "Business Partnership",
+        "description": "Are you a company interested in supporting youth? Let's talk about partnership.",
+        "link": "Contact Us"
+      }
+    }
+  }
+}

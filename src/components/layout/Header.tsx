@@ -67,13 +67,13 @@ export default function Header() {
             <div className="relative w-14 h-14 transition-transform group-hover:scale-105">
               <Image
                 src="/images/logo/logo2.png"
-                alt="Buddy's Network"
+                alt={"Buddy&apos;s Network"}
                 fill
                 className="object-contain"
                 priority
               />
             </div>
-            <span className="text-2xl font-bold text-primary hidden sm:block">Buddy's Network</span>
+            <span className="text-2xl font-bold text-primary hidden sm:block">Buddy&apos;s Network</span>
           </Link>
 
           {/* Desktop Navigation */}

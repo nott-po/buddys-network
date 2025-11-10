@@ -3,7 +3,7 @@
 import { useTranslations } from 'next-intl';
 import { useState } from 'react';
 import Link from 'next/link';
-import { FiMail, FiArrowRight, FiUsers, FiCalendar } from 'react-icons/fi';
+import { FiMail, FiArrowRight, FiUsers } from 'react-icons/fi';
 import { FaTelegramPlane, FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 
 export default function Contact() {

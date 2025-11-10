@@ -7,7 +7,6 @@ import { FiGift, FiUsers, FiShare2, FiPenTool, FiCheck } from 'react-icons/fi';
 import { FaTelegramPlane } from 'react-icons/fa';
 
 export default function ClubPage() {
-  const t = useTranslations('programs');
   const ts = useTranslations('clubActivities');
   const [width, setWidth] = useState<number>(0);
   const [mounted, setMounted] = useState<boolean>(false);

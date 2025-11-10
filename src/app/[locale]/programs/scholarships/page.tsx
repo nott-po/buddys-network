@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
-import Image from 'next/image';
+// Image not used in this page; remove import to satisfy linter
 import { FiCheck, FiArrowRight } from 'react-icons/fi';
 
 export default function ScholarshipsPage() {

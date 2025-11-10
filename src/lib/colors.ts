@@ -32,13 +32,21 @@ export const colors = {
 
 export function getColor(colorPath: string): string {
   const parts = colorPath.split('.');
-  let value: any = colors;
+  // Traverse the colors object safely without using `any`.
+  const val = parts.reduce((acc: unknown, part) => {
+    if (acc && typeof acc === 'object' && part in (acc as Record<string, unknown>)) {
+      return (acc as Record<string, unknown>)[part];
+    }
+    return undefined;
+  }, colors as unknown);
 
-  for (const part of parts) {
-    value = value[part];
+  if (typeof val === 'string') return val;
+  if (val && typeof val === 'object' && 'DEFAULT' in (val as Record<string, unknown>)) {
+    const def = (val as Record<string, unknown>).DEFAULT;
+    if (typeof def === 'string') return def;
   }
 
-  return typeof value === 'string' ? value : value.DEFAULT;
+  return '';
 }
 
 // Helper function to get complementary colors

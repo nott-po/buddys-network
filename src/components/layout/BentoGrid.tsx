@@ -1,14 +1,12 @@
 'use client';
 
 import { useLocale, useTranslations } from 'next-intl';
-import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
 export default function BentoGrid() {
   const t = useTranslations('programs');
   const locale = useLocale();
-  const [active, setActive] = useState<string>('all');
 
   return (
     <section

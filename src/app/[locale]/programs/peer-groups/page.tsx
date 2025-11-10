@@ -3,11 +3,10 @@
 import { useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
-import { FiCheck, FiArrowRight, FiUsers, FiCalendar, FiTarget, FiHeart } from 'react-icons/fi';
+import { FiCheck, FiUsers, FiCalendar, FiTarget, FiHeart } from 'react-icons/fi';
 import { FaTelegramPlane } from 'react-icons/fa';
 
 export default function PeerGroupsPage() {
-  const t = useTranslations('programs');
   const ts = useTranslations('peerGroups');
   const [width, setWidth] = useState<number>(0);
   const [mounted, setMounted] = useState<boolean>(false);

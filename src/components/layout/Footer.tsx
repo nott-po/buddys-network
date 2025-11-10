@@ -9,7 +9,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-neutral-darGray text-neutral-white">
+    <footer className="bg-neutral-darkGray text-neutral-white">
       <div className="container mx-auto px-4 py-12">
         {/* Main Footer */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
@@ -24,7 +24,7 @@ export default function Footer() {
                   className="object-contain brightness-0 invert"
                 />
               </div>
-              <span className="text-xl font-bold">Buddy's Network</span>
+              <span className="text-xl font-bold">Buddy&#39;s Network</span>
             </div>
             <p className="text-neutral-lightGray text-sm leading-relaxed">{t('description')}</p>
           </div>
@@ -185,7 +185,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <p className="text-neutral-lightGray text-sm">
-            © {currentYear} Buddy's Network. {t('rights')}
+            © {currentYear} Buddy&#39;s Network. {t('rights')}
           </p>
           <div className="flex space-x-6 text-sm">
             <Link

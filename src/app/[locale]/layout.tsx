@@ -6,12 +6,14 @@ import './globals.css';
 
 type Props = {
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 };
 
 const locales = ['pl', 'en', 'ru', 'uk'];
 
-export default async function LocaleLayout({ children, params: { locale } }: Props) {
+export default async function LocaleLayout({ children, params }: Props) {
+  const { locale } = await params;
+
   // Validate locale
   if (!locales.includes(locale)) {
     notFound();

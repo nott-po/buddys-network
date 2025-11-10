@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import { usePathname, useRouter } from 'next/navigation';
 import Link from 'next/link';
@@ -13,10 +13,11 @@ export default function Header() {
   const router = useRouter();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isLanguageMenuOpen, setIsLanguageMenuOpen] = useState(false);
+  const langRef = useRef<HTMLDivElement | null>(null);
 
   const languages = [
     { code: 'pl', name: 'Polski', flag: '🇵🇱' },
-    { code: 'en', name: 'English', flag: '🇬🇧' },
+    { code: 'en', name: 'English', flag: 'en' },
     { code: 'ru', name: 'Русский', flag: '🇷🇺' },
     { code: 'uk', name: 'Українська', flag: '🇺🇦' },
   ];
@@ -38,26 +39,45 @@ export default function Header() {
     { href: '/#contact', label: t('contact') },
   ];
 
+  useEffect(() => {
+    function handleOutsideClick(e: MouseEvent) {
+      if (isLanguageMenuOpen && langRef.current && !langRef.current.contains(e.target as Node)) {
+        setIsLanguageMenuOpen(false);
+      }
+    }
+
+    function handleKey(e: KeyboardEvent) {
+      if (e.key === 'Escape') setIsLanguageMenuOpen(false);
+    }
+
+    document.addEventListener('mousedown', handleOutsideClick);
+    document.addEventListener('keydown', handleKey);
+    return () => {
+      document.removeEventListener('mousedown', handleOutsideClick);
+      document.removeEventListener('keydown', handleKey);
+    };
+  }, [isLanguageMenuOpen]);
+
   return (
     <header className="sticky top-0 z-50 bg-neutral-white/95 backdrop-blur-md border-b border-neutral-lightGray shadow-sm">
       <nav className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href={`/${locale}`} className="flex items-center space-x-3 group">
-            <div className="relative w-10 h-10 transition-transform group-hover:scale-110">
+          <Link href={`/${locale}`} className="flex items-center space-x-4 group">
+            <div className="relative w-14 h-14 transition-transform group-hover:scale-105">
               <Image
-                src="/images/logo/logo.png"
+                src="/images/logo/logo2.png"
                 alt="Buddy's Network"
                 fill
                 className="object-contain"
                 priority
               />
             </div>
-            <span className="text-xl font-bold text-primary hidden sm:block">Buddy's Network</span>
+            <span className="text-2xl font-bold text-primary hidden sm:block">Buddy's Network</span>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-2">
+          <div className="hidden lg:flex items-center space-x-3">
             {navLinks.map((link) => {
               const isHome = link.href === '/#home';
               const href = isHome ? `/${locale}` : `/${locale}${link.href}`;
@@ -66,7 +86,7 @@ export default function Header() {
                 <Link
                   key={link.href}
                   href={href}
-                  className="px-5 py-2 text-neutral-darkGray hover:text-primary font-medium rounded-full hover:bg-primary/10 transition-all border border-transparent hover:border-primary/20"
+                  className="px-5 py-2 text-neutral-darkGray font-medium rounded-full transition-all border border-transparent hover:from-primary hover:to-secondary hover:bg-gradient-to-r hover:text-white"
                 >
                   {link.label}
                 </Link>
@@ -76,18 +96,16 @@ export default function Header() {
 
           {/* Language Switcher + Mobile Menu Button */}
           <div className="flex items-center space-x-4">
-            {/* Language Switcher Desktop */}
-            <div className="hidden lg:block relative">
+            {/* Language Switcher Desktop - show only flag to avoid duplicate language label */}
+            <div ref={langRef} className="hidden lg:block relative">
               <button
                 onClick={() => setIsLanguageMenuOpen(!isLanguageMenuOpen)}
-                className="flex items-center space-x-2 px-4 py-2 rounded-full bg-neutral-lightGray hover:bg-primary hover:text-white transition-all"
+                aria-label="Change language"
+                className="flex items-center px-3 py-2 rounded-full bg-white/10 hover:from-primary hover:to-secondary hover:bg-gradient-to-r hover:text-white transition-all"
               >
                 <span className="text-xl">{currentLanguage?.flag}</span>
-                <span className="font-medium">{currentLanguage?.code.toUpperCase()}</span>
                 <svg
-                  className={`w-4 h-4 transition-transform ${
-                    isLanguageMenuOpen ? 'rotate-180' : ''
-                  }`}
+                  className={`w-4 h-4 ml-2 transition-transform ${isLanguageMenuOpen ? 'rotate-180' : ''}`}
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -128,6 +146,8 @@ export default function Header() {
                 </div>
               )}
             </div>
+
+            
 
             {/* Mobile Menu Button */}
             <button

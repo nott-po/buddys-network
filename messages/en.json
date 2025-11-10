@@ -38,7 +38,88 @@
     },
     "openEvents": {
       "title": "Open Events",
-      "description": "We organize lectures, workshops and meetings with inspiring speakers on personal and professional development topics."
+      "subtitle": "Workshops, lectures and meetings with inspiring guests for the entire community",
+      "description": "We organize lectures, workshops and meetings with inspiring speakers on personal and professional development topics.",
+      "what": {
+        "title": "What are open events?",
+        "description": "Open events are public workshops, lectures and meetings available to everyone interested. It's a great opportunity to get to know our community and learn more about the programs we offer.",
+        "workshops": {
+          "title": "Workshops",
+          "description": "Practical sessions with experts from various fields"
+        },
+        "lectures": {
+          "title": "Lectures",
+          "description": "Inspiring presentations by leaders and experts"
+        },
+        "networking": {
+          "title": "Networking",
+          "description": "Meet new people and build valuable relationships"
+        }
+      },
+      "features": {
+        "workshops": {
+          "title": "Workshops",
+          "description": "Practical sessions with experts from various fields"
+        },
+        "lectures": {
+          "title": "Lectures",
+          "description": "Inspiring presentations by leaders and experts"
+        },
+        "networking": {
+          "title": "Networking",
+          "description": "Meet new people and build valuable relationships"
+        }
+      },
+      "topics": {
+        "title": "What topics do we cover?",
+        "description": "Our events cover a wide range of topics relevant to young people:",
+        "personal": {
+          "title": "Personal development:",
+          "timeManagement": "Time management and productivity",
+          "communication": "Communication skills",
+          "stress": "Stress management",
+          "mindfulness": "Mindfulness and well-being"
+        },
+        "professional": {
+          "title": "Professional development:",
+          "careerPlanning": "Career planning",
+          "jobSkills": "Professional skills",
+          "entrepreneurship": "Entrepreneurship",
+          "personalFinance": "Personal finance"
+        }
+      },
+      "events": {
+        "title": "Our Events",
+        "completed": "Completed",
+        "planned": "Planned",
+        "soon": "Soon",
+        "pastLabel": "Completed",
+        "pastDate": "November 2024",
+        "past": {
+          "title": "Workshop: Financial Literacy",
+          "description": "Personal finance basics, budgeting and first steps in investing for young people."
+        },
+        "upcomingLabel": "Planned",
+        "upcomingDate": "Soon",
+        "upcoming": {
+          "title": "Meeting with Psychologist",
+          "description": "Workshop on mental health, stress management and building emotional resilience."
+        },
+        "financial": {
+          "title": "Workshop: Financial Literacy",
+          "description": "Personal finance basics, budgeting and first steps in investing for young people."
+        },
+        "psychologist": {
+          "title": "Meeting with Psychologist",
+          "description": "Workshop on mental health, stress management and building emotional resilience."
+        }
+      },
+      "cta": {
+        "title": "Stay updated",
+        "description": "Join our Telegram to receive notifications about upcoming events",
+        "telegram": "Join Telegram",
+        "button": "Join Telegram"
+      }
     },
     "clubActivities": {
       "title": "Club Activities",
@@ -213,6 +294,133 @@
         "description": "Are you a company interested in supporting youth? Let's talk about partnership.",
         "link": "Contact Us"
       }
+    }
+  },
+  "scholarships": {
+    "title": "Scholarships for Youth",
+    "subtitle": "We support talented youth from Eastern Europe in achieving their educational dreams",
+    "about": {
+      "title": "About the Program",
+      "description1": "Buddy's Network scholarship program aims to support talented youth from Eastern European countries, particularly Moldova, Ukraine and Belarus, from low-income families.",
+      "description2": "We believe every talented young person deserves a chance to develop their potential, regardless of their family's financial situation."
+    },
+    "criteria": {
+      "title": "Selection Criteria",
+      "origin": {
+        "title": "Origin",
+        "description": "Youth from Eastern European countries (Moldova, Ukraine, Belarus)"
+      },
+      "abilities": {
+        "title": "Abilities",
+        "description": "Talented, capable young people with development potential"
+      },
+      "financial": {
+        "title": "Financial Situation",
+        "description": "Low-income families requiring support"
+      }
+    },
+    "status": {
+      "title": "Program Status",
+      "description": "The program is currently in the planning phase. We are working on securing grants and external funding to launch scholarships in the near future.",
+      "cta": "Contact us"
+    }
+  },
+  "clubActivities": {
+    "title": "Club Activities",
+    "subtitle": "Informal meetings, educational games and integration events for our community",
+    "what": {
+      "title": "What are our club activities?",
+      "description1": "Club activities are the informal side of our community. It's a place where members can relax, get to know each other better and spend time in a friendly atmosphere.",
+      "description2": "We organize various events - from educational games to movie nights, which allow us to build stronger bonds and create a true community."
+    },
+    "types": {
+      "title": "Types of Activities",
+      "educational": {
+        "title": "Educational Games",
+        "description": "We learn through play! We organize game sessions that develop various skills.",
+        "cashflow": "Cashflow - learning about finance and investment",
+        "mafia": "Mafia - developing communication skills",
+        "strategy": "Strategy games - analytical thinking"
+      },
+      "social": {
+        "title": "Social Events",
+        "description": "Informal meetings that allow us to get to know each other better and build friendships.",
+        "movies": "Movie nights with discussions",
+        "coffee": "Coffee and conversation meetings",
+        "outdoor": "Group outings and outdoor activities"
+      },
+      "skills": {
+        "title": "Skills Exchange",
+        "description": "Everyone has something valuable to offer. We organize informal knowledge sharing sessions.",
+        "presentations": "Member mini-presentations",
+        "workshops": "Peer-to-peer workshops",
+        "qa": "Q&A sessions on various topics"
+      },
+      "creative": {
+        "title": "Creative Activities",
+        "description": "We develop creativity and expression through various artistic forms.",
+        "bookclub": "Book club and literary discussions",
+        "workshops": "Creative workshops",
+        "projects": "Group projects"
+      }
+    },
+    "benefits": {
+      "title": "Why participate?",
+      "relationships": {
+        "title": "Building Relationships",
+        "description": "Meet new people in a relaxed, informal atmosphere"
+      },
+      "skills": {
+        "title": "Skill Development",
+        "description": "Learn new things in a fun, engaging way"
+      },
+      "relaxation": {
+        "title": "Relaxation",
+        "description": "Relax after intensive development sessions"
+      }
+    },
+    "cta": {
+      "title": "Join the fun!",
+      "description": "Follow our activities and participate in club events",
+      "telegram": "Join Telegram",
+      "ideas": "Have an idea for an activity?"
+    }
+  },
+  "peerGroups": {
+    "title": "Peer Support Groups",
+    "subtitle": "Small groups, big opportunities - we meet, develop and support each other",
+    "howItWorks": {
+      "title": "How does it work?",
+      "description": "Peer-to-peer groups are the heart of our community. We meet regularly every two weeks in small groups of up to 10 people.",
+      "frequency": {
+        "title": "Frequency",
+        "description": "2 times per month or according to group arrangements"
+      },
+      "size": {
+        "title": "Size",
+        "description": "Up to 10 people - intimate atmosphere"
+      },
+      "format": {
+        "title": "Format",
+        "description": "Discussions, tasks, mutual support"
+      },
+      "organization": {
+        "title": "Organization",
+        "description": "Self-organizing with rotating leaders"
+      }
+    },
+    "topics": {
+      "title": "What do we talk about?",
+      "description": "Each group has freedom to choose topics, but we most often discuss:",
+      "challenges": "Personal and professional challenges",
+      "goals": "Goals and development plans",
+      "experiences": "Sharing experiences and knowledge",
+      "problemSolving": "Solving problems together"
+    },
+    "cta": {
+      "title": "Join a group",
+      "description": "Interested? Join our Telegram and learn about upcoming meetings",
+      "telegram": "Join Telegram"
     }
   }
 }

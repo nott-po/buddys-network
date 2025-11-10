@@ -2,6 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
+import { FiBook, FiUsers, FiHeart, FiTrendingUp, FiGlobe, FiAward } from 'react-icons/fi';
 
 export default function About() {
   const t = useTranslations('about');
@@ -32,8 +33,8 @@ export default function About() {
                 <Image
                   src="/images/illustrations/door.png"
                   alt="Open Doors and Opportunities"
-                  width={600}
-                  height={500}
+                  width={700}
+                  height={600}
                   className="w-full h-auto animate-float"
                 />
               </div>
@@ -80,23 +81,11 @@ export default function About() {
               {/* Mission highlights */}
               <div className="grid sm:grid-cols-2 gap-4">
                 <div
-                  className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-6 hover:bg-white/20 hover:scale-105 transition-all animate-fade-in"
+                  className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-6 hover:bg-white/20 hover:scale-105 transition-all shadow-xl animate-fade-in"
                   style={{ animationDelay: '0.7s' }}
                 >
-                  <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-2xl flex items-center justify-center mb-4">
-                    <svg
-                      className="w-6 h-6 text-white"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253"
-                      />
-                    </svg>
+                  <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-2xl flex items-center justify-center mb-4 p-2">
+                    <FiBook className="w-6 h-6 text-white" aria-hidden />
                   </div>
                   <h4 className="font-bold text-neutral-darkest mb-2">Education Focus</h4>
                   <p className="text-sm text-neutral-gray">
@@ -105,23 +94,11 @@ export default function About() {
                 </div>
 
                 <div
-                  className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-6 hover:bg-white/20 hover:scale-105 transition-all animate-fade-in"
+                  className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-6 hover:bg-white/20 hover:scale-105 transition-all shadow-xl animate-fade-in"
                   style={{ animationDelay: '0.9s' }}
                 >
-                  <div className="w-12 h-12 bg-gradient-to-br from-secondary to-nature rounded-2xl flex items-center justify-center mb-4">
-                    <svg
-                      className="w-6 h-6 text-white"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857"
-                      />
-                    </svg>
+                  <div className="w-12 h-12 bg-gradient-to-br from-secondary to-nature rounded-2xl flex items-center justify-center mb-4 p-2">
+                    <FiUsers className="w-6 h-6 text-white" aria-hidden />
                   </div>
                   <h4 className="font-bold text-neutral-darkest mb-2">Community Driven</h4>
                   <p className="text-sm text-neutral-gray">
@@ -144,20 +121,8 @@ export default function About() {
                 className="bg-white/10 backdrop-blur-xl rounded-3xl p-6 border border-white/30 shadow-xl rounded-3xl p-8 hover:shadow-lg transition-all hover:-translate-y-1 group animate-fade-in"
                 style={{ animationDelay: '1s' }}
               >
-                <div className="w-14 h-14 bg-gradient-to-br from-primary to-secondary rounded-2xl flex items-center justify-center mb-6">
-                  <svg
-                    className="w-7 h-7 text-white group-hover:scale-110 transition-transform"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
-                    />
-                  </svg>
+                <div className="w-14 h-14 bg-gradient-to-br from-primary to-secondary rounded-2xl flex items-center justify-center mb-6 p-3">
+                  <FiTrendingUp className="w-7 h-7 text-white group-hover:scale-110 transition-transform" aria-hidden />
                 </div>
                 <h4 className="text-xl font-bold text-neutral-darkest mb-3">
                   {t('values.growth.title')}
@@ -172,20 +137,8 @@ export default function About() {
                 className="bg-white/10 backdrop-blur-xl rounded-3xl p-6 border border-white/30 shadow-xl rounded-3xl p-8 hover:shadow-lg transition-all hover:-translate-y-1 group animate-fade-in"
                 style={{ animationDelay: '1.1s' }}
               >
-                <div className="w-14 h-14 bg-gradient-to-br from-secondary to-nature rounded-2xl flex items-center justify-center mb-6">
-                  <svg
-                    className="w-7 h-7 text-white group-hover:scale-110 transition-transform"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857"
-                    />
-                  </svg>
+                <div className="w-14 h-14 bg-gradient-to-br from-secondary to-nature rounded-2xl flex items-center justify-center mb-6 p-3">
+                  <FiHeart className="w-7 h-7 text-white group-hover:scale-110 transition-transform" aria-hidden />
                 </div>
                 <h4 className="text-xl font-bold text-neutral-darkest mb-3">
                   {t('values.support.title')}
@@ -200,20 +153,8 @@ export default function About() {
                 className="bg-white/10 backdrop-blur-xl rounded-3xl p-6 border border-white/30 shadow-xl rounded-3xl p-8 hover:shadow-lg transition-all hover:-translate-y-1 group animate-fade-in"
                 style={{ animationDelay: '1.2s' }}
               >
-                <div className="w-14 h-14 bg-gradient-to-br from-accent to-primary rounded-2xl flex items-center justify-center mb-6">
-                  <svg
-                    className="w-7 h-7 text-white group-hover:scale-110 transition-transform"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945"
-                    />
-                  </svg>
+                <div className="w-14 h-14 bg-gradient-to-br from-accent to-primary rounded-2xl flex items-center justify-center mb-6 p-3">
+                  <FiGlobe className="w-7 h-7 text-white group-hover:scale-110 transition-transform" aria-hidden />
                 </div>
                 <h4 className="text-xl font-bold text-neutral-darkest mb-3">
                   {t('values.community.title')}
@@ -228,20 +169,8 @@ export default function About() {
                 className="bg-white/10 backdrop-blur-xl rounded-3xl p-6 border border-white/30 shadow-xl rounded-3xl p-8 hover:shadow-lg transition-all hover:-translate-y-1 group animate-fade-in"
                 style={{ animationDelay: '1.3s' }}
               >
-                <div className="w-14 h-14 bg-gradient-to-br from-nature to-secondary-dark rounded-2xl flex items-center justify-center mb-6">
-                  <svg
-                    className="w-7 h-7 text-white group-hover:scale-110 transition-transform"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"
-                    />
-                  </svg>
+                <div className="w-14 h-14 bg-gradient-to-br from-nature-dark to-secondary-dark rounded-2xl flex items-center justify-center mb-6 p-3">
+                  <FiAward className="w-7 h-7 text-white group-hover:scale-110 transition-transform" aria-hidden />
                 </div>
                 <h4 className="text-xl font-bold text-neutral-darkest mb-3">
                   {t('values.opportunity.title')}

@@ -38,7 +38,88 @@
     },
     "openEvents": {
       "title": "Otwarte wydarzenia",
-      "description": "Organizujemy lekcie, warsztaty i spotkania z inspirującymi prelegentami na tematy rozwoju osobistego i zawodowego."
+      "subtitle": "Warsztaty, wykłady i spotkania z inspirującymi gośćmi dla całej społeczności",
+      "description": "Organizujemy lekcje, warsztaty i spotkania z inspirującymi prelegentami na tematy rozwoju osobistego i zawodowego.",
+      "what": {
+        "title": "Czym są otwarte wydarzenia?",
+        "description": "Otwarte wydarzenia to publiczne warsztaty, wykłady i spotkania dostępne dla wszystkich zainteresowanych. To doskonała okazja, aby poznać naszą społeczność i dowiedzieć się więcej o oferowanych programach.",
+        "workshops": {
+          "title": "Warsztaty",
+          "description": "Praktyczne sesje z ekspertami z różnych dziedzin"
+        },
+        "lectures": {
+          "title": "Wykłady",
+          "description": "Inspirujące prezentacje liderów i ekspertów"
+        },
+        "networking": {
+          "title": "Networking",
+          "description": "Poznaj nowych ludzi i buduj wartościowe relacje"
+        }
+      },
+      "features": {
+        "workshops": {
+          "title": "Warsztaty",
+          "description": "Praktyczne sesje z ekspertami z różnych dziedzin"
+        },
+        "lectures": {
+          "title": "Wykłady",
+          "description": "Inspirujące prezentacje liderów i ekspertów"
+        },
+        "networking": {
+          "title": "Networking",
+          "description": "Poznaj nowych ludzi i buduj wartościowe relacje"
+        }
+      },
+      "topics": {
+        "title": "Jakie tematy poruszamy?",
+        "description": "Nasze wydarzenia obejmują szeroki zakres tematów istotnych dla młodych ludzi:",
+        "personal": {
+          "title": "Rozwój osobisty:",
+          "timeManagement": "Zarządzanie czasem i produktywność",
+          "communication": "Umiejętności komunikacyjne",
+          "stress": "Radzenie sobie ze stresem",
+          "mindfulness": "Mindfulness i dobre samopoczucie"
+        },
+        "professional": {
+          "title": "Rozwój zawodowy:",
+          "careerPlanning": "Planowanie kariery",
+          "jobSkills": "Umiejętności zawodowe",
+          "entrepreneurship": "Przedsiębiorczość",
+          "personalFinance": "Finanse osobiste"
+        }
+      },
+      "events": {
+        "title": "Nasze Wydarzenia",
+        "completed": "Zakończone",
+        "planned": "Planowane",
+        "soon": "Wkrótce",
+        "pastLabel": "Zakończone",
+        "pastDate": "Listopad 2024",
+        "past": {
+          "title": "Warsztat: Finansowa Gramotność",
+          "description": "Podstawy zarządzania finansami osobistymi, budżetowanie i pierwsze kroki w inwestowaniu dla młodych ludzi."
+        },
+        "upcomingLabel": "Planowane",
+        "upcomingDate": "Wkrótce",
+        "upcoming": {
+          "title": "Spotkanie z Psychologiem",
+          "description": "Warsztat o zdrowiu psychicznym, radzeniu sobie ze stresem i budowaniu odporności emocjonalnej."
+        },
+        "financial": {
+          "title": "Warsztat: Finansowa Gramotność",
+          "description": "Podstawy zarządzania finansami osobistymi, budżetowanie i pierwsze kroki w inwestowaniu dla młodych ludzi."
+        },
+        "psychologist": {
+          "title": "Spotkanie z Psychologiem",
+          "description": "Warsztat o zdrowiu psychicznym, radzeniu sobie ze stresem i budowaniu odporności emocjonalnej."
+        }
+      },
+      "cta": {
+        "title": "Bądź na bieżąco",
+        "description": "Dołącz do naszego Telegram, aby otrzymywać powiadomienia o nadchodzących wydarzeniach",
+        "telegram": "Dołącz na Telegram",
+        "button": "Dołącz na Telegram"
+      }
     },
     "clubActivities": {
       "title": "Działalność klubowa",
@@ -213,6 +294,190 @@
         "description": "Jesteś firmą zainteresowaną wsparciem młodzieży? Porozmawiajmy o partnerstwie.",
         "link": "Napisz do nas"
       }
+    }
+  },
+  "scholarships": {
+    "title": "Stypendia dla Młodzieży",
+    "subtitle": "Wspieramy talentowaną młodzież z Europy Wschodniej w realizacji marzeń edukacyjnych",
+    "about": {
+      "title": "O Programie",
+      "description1": "Program stypendialny Buddy's Network ma na celu wspieranie zdolnej młodzieży z krajów Europy Wschodniej, w szczególności z Mołdawii, Ukrainy i Białorusi, pochodzącej z rodzin o niskich dochodach.",
+      "description2": "Wierzymy, że każdy utalentowany młody człowiek zasługuje na szansę rozwijania swojego potencjału, niezależnie od sytuacji finansowej rodziny."
+    },
+    "criteria": {
+      "title": "Kryteria Wyboru",
+      "origin": {
+        "title": "Pochodzenie",
+        "description": "Młodzież z krajów Europy Wschodniej (Mołdawia, Ukraina, Białoruś)"
+      },
+      "abilities": {
+        "title": "Zdolności",
+        "description": "Utalentowani, zdolni młodzi ludzie z potencjałem rozwoju"
+      },
+      "financial": {
+        "title": "Sytuacja Finansowa",
+        "description": "Rodziny o niskich dochodach wymagające wsparcia"
+      }
+    },
+    "status": {
+      "title": "Status Programu",
+      "description": "Program jest obecnie w fazie planowania. Pracujemy nad pozyskaniem grantów i zewnętrznego finansowania, aby móc uruchomić stypendia w najbliższej przyszłości.",
+      "cta": "Skontaktuj się z nami"
+    }
+  },
+  "clubActivities": {
+    "title": "Działalność Klubowa",
+    "subtitle": "Nieformalne spotkania, gry edukacyjne i wydarzenia integracyjne dla naszej społeczności",
+    "what": {
+      "title": "Czym są nasze aktywności klubowe?",
+      "description1": "Działalność klubowa to nieformalna strona naszej społeczności. To miejsce, gdzie członkowie mogą się zrelaksować, poznać lepiej i spędzić czas w przyjaznej atmosferze.",
+      "description2": "Organizujemy różnorodne wydarzenia - od gier edukacyjnych po wieczory filmowe, które pozwalają nam budować silniejsze więzi i tworzyć prawdziwą społeczność."
+    },
+    "types": {
+      "title": "Rodzaje Aktywności",
+      "educational": {
+        "title": "Gry Edukacyjne",
+        "description": "Uczymy się przez zabawę! Organizujemy sesje gier, które rozwijają różne umiejętności.",
+        "cashflow": "Cashflow - nauka o finansach i inwestycjach",
+        "mafia": "Mafia - rozwijanie umiejętności komunikacyjnych",
+        "strategy": "Gry strategiczne - myślenie analityczne"
+      },
+      "social": {
+        "title": "Wydarzenia Społeczne",
+        "description": "Nieformalne spotkania, które pozwalają lepiej się poznać i zbudować przyjaźnie.",
+        "movies": "Wieczory filmowe z dyskusjami",
+        "coffee": "Spotkania przy kawie i rozmowie",
+        "outdoor": "Wyjścia grupowe i aktywności outdoor"
+      },
+      "skills": {
+        "title": "Wymiana Umiejętności",
+        "description": "Każdy ma coś wartościowego do zaoferowania. Organizujemy nieformalne sesje wymiany wiedzy.",
+        "presentations": "Mini-prezentacje członków",
+        "workshops": "Warsztaty \"peer-to-peer\"",
+        "qa": "Sesje Q&A na różne tematy"
+      },
+      "creative": {
+        "title": "Aktywności Kreatywne",
+        "description": "Rozwijamy kreatywność i ekspresję poprzez różnorodne formy artystyczne.",
+        "bookclub": "Klub książki i dyskusje literackie",
+        "workshops": "Warsztaty kreatywne",
+        "projects": "Projekty grupowe"
+      }
+    },
+    "benefits": {
+      "title": "Dlaczego warto uczestniczyć?",
+      "relationships": {
+        "title": "Budowanie Relacji",
+        "description": "Poznaj nowych ludzi w luźnej, nieformalnej atmosferze"
+      },
+      "skills": {
+        "title": "Rozwój Umiejętności",
+        "description": "Ucz się nowych rzeczy w zabawny, angażujący sposób"
+      },
+      "relaxation": {
+        "title": "Odprężenie",
+        "description": "Zrelaksuj się po intensywnych sesjach rozwojowych"
+      }
+    },
+    "cta": {
+      "title": "Dołącz do zabawy!",
+      "description": "Śledź nasze aktywności i bierz udział w wydarzeniach klubowych",
+      "telegram": "Dołącz na Telegram",
+      "ideas": "Masz pomysł na aktywność?"
+    }
+  },
+  "peerGroups": {
+    "title": "Grupy Wsparcia",
+    "subtitle": "Małe grupy, wielkie możliwości - spotykamy się, rozwijamy i wspieramy nawzajem",
+    "howItWorks": {
+      "title": "Jak to działa?",
+      "description": "Grupy peer-to-peer to serce naszej społeczności. Spotykamy się regularnie co dwa tygodnie w małych grupach do 10 osób.",
+      "frequency": {
+        "title": "Częstotliwość",
+        "description": "2 razy w miesiącu lub według ustaleń grupy"
+      },
+      "size": {
+        "title": "Wielkość",
+        "description": "Do 10 osób - intymna atmosfera"
+      },
+      "format": {
+        "title": "Format",
+        "description": "Dyskusje, zadania, wzajemne wsparcie"
+      },
+      "organization": {
+        "title": "Organizacja",
+        "description": "Samoorganizująca się z rotacją liderów"
+      }
+    },
+    "topics": {
+      "title": "O czym rozmawiamy?",
+      "description": "Każda grupa ma swobodę wyboru tematów, ale najczęściej poruszamy:",
+      "challenges": "Wyzwania osobiste i profesjonalne",
+      "goals": "Cele i plany rozwoju",
+      "experiences": "Dzielenie się doświadczeniami i wiedzą",
+      "problemSolving": "Rozwiązywanie problemów wspólnie"
+    },
+    "cta": {
+      "title": "Dołącz do grupy",
+      "description": "Zainteresowany? Dołącz do naszego Telegram i dowiedz się o najbliższych spotkaniach",
+      "telegram": "Dołącz na Telegram"
+    }
+  },
+  "openEvents": {
+    "title": "Otwarte Wydarzenia",
+    "subtitle": "Warsztaty, wykłady i spotkania z inspirującymi gośćmi dla całej społeczności",
+    "what": {
+      "title": "Czym są otwarte wydarzenia?",
+      "description": "Otwarte wydarzenia to publiczne warsztaty, wykłady i spotkania dostępne dla wszystkich zainteresowanych. To doskonała okazja, aby poznać naszą społeczność i dowiedzieć się więcej o oferowanych programach.",
+      "workshops": {
+        "title": "Warsztaty",
+        "description": "Praktyczne sesje z ekspertami z różnych dziedzin"
+      },
+      "lectures": {
+        "title": "Wykłady",
+        "description": "Inspirujące prezentacje liderów i ekspertów"
+      },
+      "networking": {
+        "title": "Networking",
+        "description": "Poznaj nowych ludzi i buduj wartościowe relacje"
+      }
+    },
+    "topics": {
+      "title": "Jakie tematy poruszamy?",
+      "description": "Nasze wydarzenia obejmują szeroki zakres tematów istotnych dla młodych ludzi:",
+      "personal": {
+        "title": "Rozwój osobisty:",
+        "timeManagement": "Zarządzanie czasem i produktywność",
+        "communication": "Umiejętności komunikacyjne",
+        "stress": "Radzenie sobie ze stresem",
+        "mindfulness": "Mindfulness i dobre samopoczucie"
+      },
+      "professional": {
+        "title": "Rozwój zawodowy:",
+        "career": "Planowanie kariery",
+        "skills": "Umiejętności zawodowe",
+        "entrepreneurship": "Przedsiębiorczość",
+        "finance": "Finanse osobiste"
+      }
+    },
+    "events": {
+      "title": "Nasze Wydarzenia",
+      "completed": "Zakończone",
+      "planned": "Planowane",
+      "soon": "Wkrótce",
+      "financial": {
+        "title": "Warsztat: Finansowa Gramotność",
+        "description": "Podstawy zarządzania finansami osobistymi, budżetowanie i pierwsze kroki w inwestowaniu dla młodych ludzi."
+      },
+      "psychologist": {
+        "title": "Spotkanie z Psychologiem",
+        "description": "Warsztat o zdrowiu psychicznym, radzeniu sobie ze stresem i budowaniu odporności emocjonalnej."
+      }
+    },
+    "cta": {
+      "title": "Bądź na bieżąco",
+      "description": "Dołącz do naszego Telegram, aby otrzymywać powiadomienia o nadchodzących wydarzeniach",
+      "telegram": "Dołącz na Telegram"
     }
   }
 }

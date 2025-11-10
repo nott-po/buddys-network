@@ -2,6 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
+import { FiCalendar, FiClock, FiZap, FiGlobe } from 'react-icons/fi';
 
 export default function Events() {
   const t = useTranslations('events');
@@ -22,23 +23,11 @@ export default function Events() {
           </div>
 
           {/* Bi-Weekly Meeting Info Banner */}
-          <div className="bg-gradient-to-r from-primary/10 via-secondary/10 to-primary/10 rounded-3xl p-8 md:p-10 mb-12 border border-primary/20">
+          <div className="bg-gradient-to-r from-primary/10 via-secondary/10 to-primary/10 rounded-3xl p-8 md:p-10 mb-12 border border-primary/20 shadow-xl hover:shadow-2xl hover:scale-[1.01] hover:-translate-y-1 transition-all duration-300">
             <div className="flex flex-col md:flex-row items-center justify-between gap-6">
               <div className="flex items-start space-x-4">
-                <div className="w-14 h-14 bg-primary/20 backdrop-blur-xl rounded-2xl flex items-center justify-center border border-primary/30 flex-shrink-0">
-                  <svg
-                    className="w-7 h-7 text-primary"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-                    />
-                  </svg>
+                <div className="w-14 h-14 bg-gradient-to-br from-primary to-secondary rounded-2xl flex items-center justify-center flex-shrink-0 p-3">
+                  <FiCalendar className="w-7 h-7 text-white" aria-hidden />
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-neutral-darkGray mb-2">
@@ -51,7 +40,7 @@ export default function Events() {
                 href="https://t.me/BuddysNetwork"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-3 bg-primary text-white font-medium rounded-full hover:bg-primary-dark transition-all hover:shadow-lg whitespace-nowrap"
+                className="px-6 py-3 bg-gradient-to-r from-primary to-secondary text-white font-medium rounded-full hover:shadow-lg transition-all whitespace-nowrap"
               >
                 {t('regular.cta')}
               </Link>
@@ -61,26 +50,14 @@ export default function Events() {
           {/* Events Grid */}
           <div className="grid md:grid-cols-2 gap-6 mb-12">
             {/* Upcoming Event - Psychologist */}
-            <div className="bg-neutral-lightGray rounded-3xl overflow-hidden hover:shadow-lg transition-all group">
+            <div className="bg-neutral-lightGray rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all group">
               <div className="p-8">
                 <div className="flex items-center justify-between mb-4">
                   <span className="px-3 py-1 bg-secondary/20 text-secondary rounded-full text-xs font-semibold border border-secondary/30">
                     {t('upcoming.label')}
                   </span>
-                  <div className="w-10 h-10 bg-secondary/20 backdrop-blur-xl rounded-xl flex items-center justify-center border border-secondary/30">
-                    <svg
-                      className="w-5 h-5 text-secondary"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
-                      />
-                    </svg>
+                  <div className="w-10 h-10 bg-gradient-to-br from-secondary to-nature rounded-xl flex items-center justify-center p-2">
+                    <FiCalendar className="w-5 h-5 text-white" aria-hidden />
                   </div>
                 </div>
                 <h3 className="text-2xl font-bold text-neutral-darkGray mb-3">
@@ -89,25 +66,11 @@ export default function Events() {
                 <p className="text-neutral-gray mb-4">{t('psychologist.description')}</p>
                 <div className="flex items-center space-x-4 text-sm text-neutral-gray">
                   <div className="flex items-center space-x-2">
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-                      />
-                    </svg>
+                    <FiCalendar className="w-4 h-4 text-neutral-gray" aria-hidden />
                     <span>{t('psychologist.date')}</span>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                      />
-                    </svg>
+                    <FiClock className="w-4 h-4 text-neutral-gray" aria-hidden />
                     <span>{t('psychologist.time')}</span>
                   </div>
                 </div>
@@ -115,26 +78,14 @@ export default function Events() {
             </div>
 
             {/* Past Event - Financial Literacy */}
-            <div className="bg-neutral-lightGray rounded-3xl overflow-hidden hover:shadow-lg transition-all group opacity-75">
+            <div className="bg-neutral-lightGray rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all group opacity-75">
               <div className="p-8">
                 <div className="flex items-center justify-between mb-4">
                   <span className="px-3 py-1 bg-primary/20 text-primary rounded-full text-xs font-semibold border border-primary/30">
                     {t('past.label')}
                   </span>
-                  <div className="w-10 h-10 bg-primary/20 backdrop-blur-xl rounded-xl flex items-center justify-center border border-primary/30">
-                    <svg
-                      className="w-5 h-5 text-primary"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                      />
-                    </svg>
+                  <div className="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center p-2">
+                    <FiGlobe className="w-5 h-5 text-white" aria-hidden />
                   </div>
                 </div>
                 <h3 className="text-2xl font-bold text-neutral-darkGray mb-3">
@@ -161,20 +112,8 @@ export default function Events() {
           {/* Future Ideas Teaser */}
           <div className="bg-gradient-to-br from-primary/5 to-secondary/5 rounded-3xl p-8 md:p-10 border border-primary/10">
             <div className="text-center max-w-2xl mx-auto">
-              <div className="w-16 h-16 bg-primary/20 backdrop-blur-xl rounded-2xl flex items-center justify-center mx-auto mb-6 border border-primary/30">
-                <svg
-                  className="w-8 h-8 text-primary"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M13 10V3L4 14h7v7l9-11h-7z"
-                  />
-                </svg>
+              <div className="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-2xl flex items-center justify-center mx-auto mb-6 p-3">
+                <FiZap className="w-8 h-8 text-white" aria-hidden />
               </div>
               <h3 className="text-2xl font-bold text-neutral-darkGray mb-4">{t('future.title')}</h3>
               <p className="text-neutral-gray mb-6">{t('future.description')}</p>

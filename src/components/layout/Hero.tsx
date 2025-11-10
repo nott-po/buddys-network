@@ -50,12 +50,12 @@ export default function Hero() {
                 </div>
 
                 {/* Logo/Icon */}
-                <div className="relative w-20 h-20 mb-6 bg-white/30 backdrop-blur-xl rounded-3xl p-4 border border-white/40">
+                <div className="relative w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 mb-3 bg-white/30 backdrop-blur-xl rounded-3xl p-5 md:p-6 border border-white/40">
                   <Image
-                    src="/images/logo/logo.png"
+                    src="/images/logo/logo2.png"
                     alt="Buddy's Network"
                     fill
-                    className="object-contain p-2"
+                    className="object-contain p-3"
                   />
                 </div>
 

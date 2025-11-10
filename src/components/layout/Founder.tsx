@@ -2,6 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
+import { FiBook, FiHeart, FiTrendingUp, FiMessageSquare } from 'react-icons/fi';
 
 export default function Founder() {
   const t = useTranslations('founder');
@@ -32,7 +33,7 @@ export default function Founder() {
               <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-[40px] transform rotate-3"></div>
 
               {/* Main photo card */}
-              <div className="relative bg-white/80 backdrop-blur-xl rounded-[40px] p-4 shadow-2xl border border-white/40">
+              <div className="relative bg-white/80 backdrop-blur-xl rounded-[40px] p-4 shadow-2xl border border-white/40 animate-float">
                 <div className="relative aspect-[3/4] rounded-[32px] overflow-hidden bg-neutral-lightGray">
                   <Image
                     src="/images/founder.jpg"
@@ -54,20 +55,8 @@ export default function Founder() {
             <div className="space-y-6">
               <div className="bg-white/50 backdrop-blur-xl rounded-3xl p-8 border border-white/30">
                 <div className="flex items-start space-x-4 mb-4">
-                  <div className="w-12 h-12 bg-primary/20 backdrop-blur-xl rounded-2xl flex items-center justify-center border border-primary/30 flex-shrink-0">
-                    <svg
-                      className="w-6 h-6 text-primary"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
-                      />
-                    </svg>
+                  <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-2xl flex items-center justify-center flex-shrink-0 p-2">
+                    <FiBook className="w-6 h-6 text-white" aria-hidden />
                   </div>
                   <div>
                     <h4 className="text-xl font-bold text-neutral-darkGray mb-2">
@@ -80,20 +69,8 @@ export default function Founder() {
 
               <div className="bg-white/50 backdrop-blur-xl rounded-3xl p-8 border border-white/30">
                 <div className="flex items-start space-x-4 mb-4">
-                  <div className="w-12 h-12 bg-secondary/20 backdrop-blur-xl rounded-2xl flex items-center justify-center border border-secondary/30 flex-shrink-0">
-                    <svg
-                      className="w-6 h-6 text-secondary"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                      />
-                    </svg>
+                  <div className="w-12 h-12 bg-gradient-to-br from-secondary to-nature rounded-2xl flex items-center justify-center flex-shrink-0 p-2">
+                    <FiHeart className="w-6 h-6 text-white" aria-hidden />
                   </div>
                   <div>
                     <h4 className="text-xl font-bold text-neutral-darkGray mb-2">
@@ -108,20 +85,8 @@ export default function Founder() {
 
               <div className="bg-white/50 backdrop-blur-xl rounded-3xl p-8 border border-white/30">
                 <div className="flex items-start space-x-4 mb-4">
-                  <div className="w-12 h-12 bg-primary-dark/20 backdrop-blur-xl rounded-2xl flex items-center justify-center border border-primary-dark/30 flex-shrink-0">
-                    <svg
-                      className="w-6 h-6 text-primary-dark"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M13 10V3L4 14h7v7l9-11h-7z"
-                      />
-                    </svg>
+                  <div className="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-2xl flex items-center justify-center flex-shrink-0 p-2">
+                    <FiTrendingUp className="w-6 h-6 text-white" aria-hidden />
                   </div>
                   <div>
                     <h4 className="text-xl font-bold text-neutral-darkGray mb-2">
@@ -136,12 +101,10 @@ export default function Founder() {
 
           {/* Quote Section */}
           <div className="max-w-4xl mx-auto">
-            <div className="relative bg-white/30 backdrop-blur-2xl rounded-[40px] p-10 md:p-12 border border-white/40 shadow-2xl">
+            <div className="relative bg-white/30 backdrop-blur-2xl rounded-[40px] p-10 md:p-12 border border-white/40 shadow-2xl hover:shadow-3xl hover:scale-[1.01] transition-all duration-300">
               {/* Quote icon */}
               <div className="absolute top-8 left-8 text-primary/20">
-                <svg className="w-16 h-16" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-                </svg>
+                <FiMessageSquare className="w-16 h-16" aria-hidden />
               </div>
 
               <div className="relative z-10 pt-12">

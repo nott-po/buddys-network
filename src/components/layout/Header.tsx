@@ -36,6 +36,7 @@ export default function Header() {
     { href: '/#about', label: t('about') },
     { href: '/#programs', label: t('programs') },
     { href: '/#events', label: t('events') },
+    { href: '/posts', label: t('news') },
     { href: '/#contact', label: t('contact') },
   ];
 

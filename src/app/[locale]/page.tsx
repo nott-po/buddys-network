@@ -1,23 +1,29 @@
-import Hero from '@/components/layout/Hero';
-import BentoGrid from '@/components/layout/BentoGrid';
-import About from '@/components/layout/About';
-import Footer from '@/components/layout/Footer';
-import Events from '@/components/layout/Events';
-import Founder from '@/components/layout/Founder';
-import Contact from '@/components/layout/Contact';
-import Donation from '@/components/layout/Donation';
+import Hero from '@/components/layout/Hero'
+import BentoGrid from '@/components/layout/BentoGrid'
+import About from '@/components/layout/About'
+import Footer from '@/components/layout/Footer'
+import EventsWithPosts from '@/components/layout/EventsWithPosts'
+import Founder from '@/components/layout/Founder'
+import ContactWrapper from '@/components/layout/ContactWrapper'
+import Donation from '@/components/layout/Donation'
 
-export default function HomePage() {
+type Props = {
+  params: Promise<{ locale: string }>
+}
+
+export default async function HomePage({ params }: Props) {
+  const { locale } = await params
+
   return (
     <main>
       <Hero />
       <BentoGrid />
       <About />
       <Founder />
-      <Events />
+      <EventsWithPosts locale={locale} />
       <Donation />
-      <Contact />
+      <ContactWrapper />
       <Footer />
     </main>
-  );
+  )
 }

@@ -10,8 +10,14 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'buddys.network',
       },
+      {
+        protocol: 'https',
+        hostname: 'cdn.sanity.io',
+      },
     ],
   },
+  // Sanity packages that need special handling
+  serverExternalPackages: ['sanity', '@sanity/client', '@sanity/next-loader'],
 };
 
 export default withNextIntl(nextConfig);

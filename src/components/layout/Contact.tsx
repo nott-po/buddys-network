@@ -4,11 +4,22 @@ import { useTranslations } from 'next-intl';
 import { useState } from 'react';
 import Link from 'next/link';
 import { FiMail, FiArrowRight, FiUsers } from 'react-icons/fi';
-import { FaTelegramPlane, FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
+import { FaTelegramPlane, FaFacebookF, FaInstagram } from 'react-icons/fa';
 
-export default function Contact() {
+type ContactData = {
+  email: string
+  telegram: string
+  facebook: string
+  instagram: string
+}
+
+type Props = {
+  contactData: ContactData
+}
+
+export default function Contact({ contactData }: Props) {
   const t = useTranslations('contact');
-  const CONTACT_EMAIL = process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? 'fundacja@buddys.network';
+  const { email, telegram, facebook, instagram } = contactData;
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -131,11 +142,11 @@ ${formData.message}
 Sent from website contact form`;
 
                     // Open Gmail with everything pre-filled
-                    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(CONTACT_EMAIL)}&su=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+                    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(email)}&su=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
                     window.open(gmailUrl, '_blank');
-                    
+
                     // Also copy to clipboard as backup
-                    navigator.clipboard.writeText(`To: ${CONTACT_EMAIL}
+                    navigator.clipboard.writeText(`To: ${email}
 Subject: ${emailSubject}
 
 ${emailBody}`).then(() => {
@@ -175,7 +186,7 @@ ${emailBody}`).then(() => {
                     </h4>
                     <p className="text-neutral-gray mb-4">{t('telegram.description')}</p>
                     <Link
-                      href="https://t.me/BuddysNetwork"
+                      href={telegram}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-primary to-secondary text-white font-medium rounded-full hover:shadow-lg hover:scale-105 transition-all duration-300"
@@ -225,10 +236,10 @@ ${emailBody}`).then(() => {
                       {t('email.title')}
                     </h4>
                     <a
-                      href="mailto:fundacja@buddys.network"
+                      href={`mailto:${email}`}
                       className="text-primary hover:text-secondary transition-colors font-medium"
                     >
-                        fundacja@buddys.network
+                      {email}
                     </a>
                   </div>
                 </div>
@@ -239,10 +250,10 @@ ${emailBody}`).then(() => {
           {/* Social Media Links */}
           <div className="text-center animate-fade-in" style={{ animationDelay: '1.1s' }}>
             <h3 className="text-2xl font-bold text-neutral-darkest mb-8">{t('social.title')}</h3>
-              <div className="flex justify-center space-x-4">
+            <div className="flex justify-center space-x-4">
               {/* Telegram */}
               <a
-                href="https://t.me/BuddysNetwork"
+                href={telegram}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-14 h-14 bg-gradient-to-br from-primary to-accent rounded-2xl flex items-center justify-center transition-all duration-300 hover:scale-110 group p-3"
@@ -251,32 +262,31 @@ ${emailBody}`).then(() => {
                 <FaTelegramPlane className="w-6 h-6 text-white group-hover:text-white transition-colors" aria-hidden />
               </a>
 
-              {/* Facebook - Placeholder */}
-              <a
-                href="#"
-                className="w-14 h-14 bg-gradient-to-br from-secondary to-nature rounded-2xl flex items-center justify-center transition-all duration-300 hover:scale-110 group p-3"
-                aria-label="Facebook"
-              >
-                <FaFacebookF className="w-6 h-6 text-white group-hover:text-white transition-colors" aria-hidden />
-              </a>
+              {/* Facebook */}
+              {facebook !== '#' && (
+                <a
+                  href={facebook}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-14 h-14 bg-gradient-to-br from-secondary to-nature rounded-2xl flex items-center justify-center transition-all duration-300 hover:scale-110 group p-3"
+                  aria-label="Facebook"
+                >
+                  <FaFacebookF className="w-6 h-6 text-white group-hover:text-white transition-colors" aria-hidden />
+                </a>
+              )}
 
-              {/* Instagram - Placeholder */}
-              <a
-                href="#"
-                className="w-14 h-14 bg-gradient-to-br from-accent to-primary rounded-2xl flex items-center justify-center transition-all duration-300 hover:scale-110 group p-3"
-                aria-label="Instagram"
-              >
-                <FaInstagram className="w-6 h-6 text-white group-hover:text-white transition-colors" aria-hidden />
-              </a>
-
-              {/* LinkedIn - Placeholder */}
-              <a
-                href="#"
-                className="w-14 h-14 bg-gradient-to-br from-nature to-secondary rounded-2xl flex items-center justify-center transition-all duration-300 hover:scale-110 group p-3"
-                aria-label="LinkedIn"
-              >
-                <FaLinkedinIn className="w-6 h-6 text-white group-hover:text-white transition-colors" aria-hidden />
-              </a>
+              {/* Instagram */}
+              {instagram !== '#' && (
+                <a
+                  href={instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-14 h-14 bg-gradient-to-br from-accent to-primary rounded-2xl flex items-center justify-center transition-all duration-300 hover:scale-110 group p-3"
+                  aria-label="Instagram"
+                >
+                  <FaInstagram className="w-6 h-6 text-white group-hover:text-white transition-colors" aria-hidden />
+                </a>
+              )}
             </div>
           </div>
         </div>

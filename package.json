@@ -3,19 +3,36 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build --turbopack",
+    "dev": "next dev",
+    "build": "next build",
     "start": "next start",
     "lint": "eslint"
   },
   "dependencies": {
+    "@portabletext/react": "^6.0.2",
+    "@sanity/image-url": "^2.0.3",
+    "@sanity/vision": "^5.7.0",
+    "arrify": "^3.0.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
-    "react-icons": "^4.11.0",
+    "humanize-list": "^1.0.1",
+    "inherits": "^2.0.4",
+    "leven": "^4.1.0",
     "next": "15.5.4",
     "next-intl": "^4.3.9",
-    "react": "19.1.0",
-    "react-dom": "19.1.0"
+    "next-sanity": "^10.1.4",
+    "raf": "^3.4.1",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "react-icons": "^4.11.0",
+    "sanity": "^4.22.0",
+    "shallow-equals": "^1.0.0",
+    "styled-components": "^6.3.8",
+    "void-elements": "^3.1.0"
+  },
+  "overrides": {
+    "react": "$react",
+    "react-dom": "$react-dom"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

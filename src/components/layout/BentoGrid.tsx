@@ -161,51 +161,44 @@ export default function BentoGrid() {
               </div>
             </Link>
 
-            {/* Club Activities - Horizontal card with tea illustration */}
+            {/* Club Activities - Same style as other cards */}
             <Link
               href={`/${locale}/programs/club`}
-              className="lg:col-span-3 group relative rounded-[32px] h-[340px] md:h-[300px] mt-6 lg:mt-10 transition-all duration-500 animate-fade-in bg-transparent"
+              className="group relative h-[220px] md:h-[260px] lg:h-[290px] transition-all duration-500 animate-fade-in"
               style={{ animationDelay: '0.9s' }}
             >
-              <div className="relative h-full flex items-center">
-                {/* Content card */}
-                <div className="flex-1 p-8 lg:p-12">
-                  <div className="bg-white/10 backdrop-blur-xl rounded-3xl p-6 border border-white/30 shadow-xl rounded-3xl p-8 max-w-md">
-                    <h3 className="text-3xl font-bold text-neutral-darkest mb-4">
-                      {t('clubActivities.title')}
-                    </h3>
-                    <p className="text-neutral-dark leading-relaxed mb-6">
-                      {t('clubActivities.description')}
-                    </p>
-                    <div className="inline-flex items-center text-primary font-medium group-hover:text-secondary transition-colors">
-                      <span>Explore Activities</span>
-                      <svg
-                        className="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M17 8l4 4m0 0l-4 4m4-4H3"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
+              {/* Tea illustration - full-bleed, no card wrapper */}
+              <div className="relative w-full h-full flex items-center md:items-start justify-center pt-0 md:pt-4">
+                <Image
+                  src="/images/illustrations/tea.png"
+                  alt="Community Activities"
+                  width={280}
+                  height={280}
+                  className="w-full h-auto max-w-[160px] md:max-w-[200px] lg:max-w-[240px] md:-translate-y-4 transition-transform duration-700 animate-float"
+                  style={{ animationDelay: '2s' }}
+                />
+              </div>
 
-                {/* Tea illustration - bigger and no card */}
-                <div className="flex-none w-[220px] sm:w-[260px] md:flex-1 md:w-auto flex items-center justify-center p-4 md:p-8">
-                  <Image
-                    src="/images/illustrations/tea.png"
-                    alt="Community Activities"
-                    width={500}
-                    height={500}
-                    className="w-full h-auto max-w-[220px] sm:max-w-[260px] md:max-w-lg transition-transform duration-700 animate-float"
-                    style={{ animationDelay: '2s' }}
-                  />
+              {/* Content card at bottom */}
+              <div className="absolute bottom-4 left-4 right-4 bg-white/10 backdrop-blur-xl rounded-3xl p-3 md:p-5 border border-white/30 shadow-xl">
+                <h3 className="text-xl font-bold text-neutral-darkest mb-2">
+                  {t('clubActivities.title')}
+                </h3>
+                <p className="text-neutral-dark text-xs leading-relaxed line-clamp-2">
+                  {t('clubActivities.description')}
+                </p>
+                <div className="mt-3">
+                  <div className="inline-flex items-center text-primary font-medium group-hover:text-secondary transition-colors">
+                    <span>Explore</span>
+                    <svg
+                      className="w-4 h-4 ml-2"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </div>
                 </div>
               </div>
             </Link>

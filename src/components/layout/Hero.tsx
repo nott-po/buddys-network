@@ -128,7 +128,7 @@ export default function Hero() {
             </div>
 
             {/* Right: Hero Illustration with Animated Stats */}
-            <div className="relative animate-fade-in">
+            <div className="relative animate-fade-in overflow-hidden md:overflow-visible">
               {/* Main illustration */}
               <div className="relative">
                 <Image
@@ -141,12 +141,12 @@ export default function Hero() {
                 />
               </div>
 
-              {/* Floating Stats Cards with Animated Counters */}
-              <div className="absolute top-8 -left-8 bg-white/10 backdrop-blur-xl rounded-3xl p-6 border border-white/30 shadow-xl rounded-3xl p-6 shadow-xl animate-fade-in">
+              {/* Floating Stats Cards with Animated Counters - hidden on mobile to prevent overflow */}
+              <div className="hidden md:block absolute top-8 left-0 lg:-left-8 bg-white/10 backdrop-blur-xl rounded-3xl p-4 lg:p-6 border border-white/30 shadow-xl animate-fade-in">
                 <div className="flex items-center space-x-3">
-                  <div className="w-12 h-12 bg-gradient-to-br from-nature to-secondary rounded-2xl flex items-center justify-center">
+                  <div className="w-10 h-10 lg:w-12 lg:h-12 bg-gradient-to-br from-nature to-secondary rounded-2xl flex items-center justify-center">
                     <svg
-                      className="w-6 h-6 text-white"
+                      className="w-5 h-5 lg:w-6 lg:h-6 text-white"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -165,11 +165,11 @@ export default function Hero() {
                 </div>
               </div>
 
-              <div className="absolute bottom-16 -right-8 bg-white/10 backdrop-blur-xl rounded-3xl p-6 border border-white/30 shadow-xl rounded-3xl p-6 shadow-xl animate-fade-in">
+              <div className="hidden md:block absolute bottom-16 right-0 lg:-right-8 bg-white/10 backdrop-blur-xl rounded-3xl p-4 lg:p-6 border border-white/30 shadow-xl animate-fade-in">
                 <div className="flex items-center space-x-3">
-                  <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-2xl flex items-center justify-center">
+                  <div className="w-10 h-10 lg:w-12 lg:h-12 bg-gradient-to-br from-primary to-accent rounded-2xl flex items-center justify-center">
                     <svg
-                      className="w-6 h-6 text-white"
+                      className="w-5 h-5 lg:w-6 lg:h-6 text-white"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -188,11 +188,11 @@ export default function Hero() {
                 </div>
               </div>
 
-              <div className="absolute top-1/2 -right-12 bg-white/10 backdrop-blur-xl rounded-3xl p-6 border border-white/30 shadow-xl rounded-3xl p-6 shadow-xl animate-fade-in">
+              <div className="hidden md:block absolute top-1/2 right-0 lg:-right-12 bg-white/10 backdrop-blur-xl rounded-3xl p-4 lg:p-6 border border-white/30 shadow-xl animate-fade-in">
                 <div className="flex items-center space-x-3">
-                  <div className="w-12 h-12 bg-gradient-to-br from-secondary to-nature-light rounded-2xl flex items-center justify-center">
+                  <div className="w-10 h-10 lg:w-12 lg:h-12 bg-gradient-to-br from-secondary to-nature-light rounded-2xl flex items-center justify-center">
                     <svg
-                      className="w-6 h-6 text-white"
+                      className="w-5 h-5 lg:w-6 lg:h-6 text-white"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"

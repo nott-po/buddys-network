@@ -36,9 +36,10 @@ export default async function Footer() {
               <div className="relative w-14 h-14">
                 <Image
                   src="/images/logo/logo.png"
-                  alt="Buddy's Network"
+                  alt=""
                   fill
                   className="object-contain"
+                  aria-hidden="true"
                 />
               </div>
               <span className="text-xl font-bold text-white">Buddy&#39;s Network</span>

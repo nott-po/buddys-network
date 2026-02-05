@@ -181,9 +181,9 @@ ${emailBody}`).then(() => {
                     <FaTelegramPlane className="w-7 h-7 text-white" aria-hidden />
                   </div>
                   <div className="flex-1">
-                    <h4 className="text-xl font-bold text-neutral-darkest mb-2">
+                    <h3 className="text-xl font-bold text-neutral-darkest mb-2">
                       {t('telegram.title')}
-                    </h4>
+                    </h3>
                     <p className="text-neutral-gray mb-4">{t('telegram.description')}</p>
                     <Link
                       href={telegram}
@@ -217,9 +217,9 @@ ${emailBody}`).then(() => {
                     <FiUsers className="w-7 h-7 text-white" aria-hidden />
                   </div>
                   <div>
-                    <h4 className="text-xl font-bold text-neutral-darkest mb-2">
+                    <h3 className="text-xl font-bold text-neutral-darkest mb-2">
                       {t('meetings.title')}
-                    </h4>
+                    </h3>
                     <p className="text-neutral-gray">{t('meetings.description')}</p>
                   </div>
                 </div>
@@ -232,9 +232,9 @@ ${emailBody}`).then(() => {
                     <FiMail className="w-7 h-7 text-white" aria-hidden />
                   </div>
                   <div>
-                    <h4 className="text-xl font-bold text-neutral-darkest mb-2">
+                    <h3 className="text-xl font-bold text-neutral-darkest mb-2">
                       {t('email.title')}
-                    </h4>
+                    </h3>
                     <a
                       href={`mailto:${email}`}
                       className="text-primary hover:text-secondary transition-colors font-medium"

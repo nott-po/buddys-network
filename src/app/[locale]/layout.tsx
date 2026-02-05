@@ -7,24 +7,28 @@ import './globals.css';
 
 const metaByLocale = {
   pl: {
+    title: "Buddy's Network - Społeczność Młodych Liderów i Mentorów",
     description:
-      'Tworzymy społeczność młodych, ambitnych ludzi dążących do rozwoju, gdzie każdy może być zarówno mentorem, jak i uczniem.',
-    shortDescription: 'Tworzymy społeczność młodych, ambitnych ludzi dążących do rozwoju.',
+      'Dołącz do Buddy\'s Network! Tworzymy społeczność młodych, ambitnych ludzi dążących do rozwoju. Programy stypendialne, wydarzenia, grupy wsparcia i działalność klubowa. Zostań mentorem lub uczniem już dziś!',
+    shortDescription: 'Społeczność młodych liderów - programy stypendialne, wydarzenia i mentoring.',
   },
   en: {
+    title: "Buddy's Network - Community of Young Leaders & Mentors",
     description:
-      'We build a community of young, ambitious people focused on growth, where everyone can be both a mentor and a learner.',
-    shortDescription: 'A community of young, ambitious people focused on growth.',
+      'Join Buddy\'s Network! We build a community of young, ambitious people focused on growth. Scholarship programs, events, peer groups and club activities. Become a mentor or learner today!',
+    shortDescription: 'Community of young leaders - scholarships, events and mentoring programs.',
   },
   ru: {
+    title: "Buddy's Network - Сообщество Молодых Лидеров и Менторов",
     description:
-      'Мы создаем сообщество молодых, амбициозных людей, стремящихся к развитию, где каждый может быть и наставником, и учеником.',
-    shortDescription: 'Сообщество молодых, амбициозных людей, стремящихся к развитию.',
+      'Присоединяйтесь к Buddy\'s Network! Мы создаем сообщество молодых, амбициозных людей, стремящихся к развитию. Стипендиальные программы, события, группы поддержки и клубная деятельность.',
+    shortDescription: 'Сообщество молодых лидеров - стипендии, события и менторинг.',
   },
   uk: {
+    title: "Buddy's Network - Спільнота Молодих Лідерів та Менторів",
     description:
-      'Ми створюємо спільноту молодих, амбітних людей, які прагнуть розвитку, де кожен може бути і ментором, і учнем.',
-    shortDescription: 'Спільнота молодих, амбітних людей, які прагнуть розвитку.',
+      'Приєднуйтесь до Buddy\'s Network! Ми створюємо спільноту молодих, амбітних людей, які прагнуть розвитку. Стипендіальні програми, події, групи підтримки та клубна діяльність.',
+    shortDescription: 'Спільнота молодих лідерів - стипендії, події та менторинг.',
   },
 } as const;
 
@@ -47,10 +51,11 @@ export async function generateMetadata({
 
   return {
     metadataBase: new URL('https://www.buddys.network'),
-    title: "Buddy's Network",
+    title: meta.title,
     description: meta.description,
+    keywords: ['Buddy\'s Network', 'społeczność', 'młodzież', 'mentoring', 'stypendia', 'wydarzenia', 'rozwój', 'liderzy', 'community', 'youth'],
     openGraph: {
-      title: "Buddy's Network",
+      title: meta.title,
       description: meta.shortDescription,
       type: 'website',
       locale: ogLocale,
@@ -64,8 +69,8 @@ export async function generateMetadata({
       ],
     },
     twitter: {
-      card: 'summary',
-      title: "Buddy's Network",
+      card: 'summary_large_image',
+      title: meta.title,
       description: meta.shortDescription,
       images: ['/images/logo/logo2.png'],
     },

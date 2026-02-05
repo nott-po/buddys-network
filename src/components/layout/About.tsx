@@ -87,7 +87,7 @@ export default function About() {
                   <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-2xl flex items-center justify-center mb-4 p-2">
                     <FiBook className="w-6 h-6 text-white" aria-hidden />
                   </div>
-                  <h4 className="font-bold text-neutral-darkest mb-2">Education Focus</h4>
+                  <h3 className="font-bold text-neutral-darkest mb-2 text-base">Education Focus</h3>
                   <p className="text-sm text-neutral-gray">
                     Empowering through knowledge and learning opportunities
                   </p>
@@ -100,7 +100,7 @@ export default function About() {
                   <div className="w-12 h-12 bg-gradient-to-br from-secondary to-nature rounded-2xl flex items-center justify-center mb-4 p-2">
                     <FiUsers className="w-6 h-6 text-white" aria-hidden />
                   </div>
-                  <h4 className="font-bold text-neutral-darkest mb-2">Community Driven</h4>
+                  <h3 className="font-bold text-neutral-darkest mb-2 text-base">Community Driven</h3>
                   <p className="text-sm text-neutral-gray">
                     Building connections across Eastern Europe
                   </p>

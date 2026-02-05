@@ -53,19 +53,25 @@ export default function Hero() {
                 <div className="relative w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 mb-3 bg-white/30 backdrop-blur-xl rounded-3xl p-5 md:p-6 border border-white/40">
                   <Image
                     src="/images/logo/logo2.png"
-                    alt="Buddy's Network"
+                    alt=""
                     fill
                     className="object-contain p-3"
+                    aria-hidden="true"
                   />
                 </div>
 
                 {/* Title with new gradient */}
-                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-                  <span className="bg-gradient-to-r from-primary via-secondary to-nature bg-clip-text text-transparent">
-                    Buddy&#39;s
+                <h1 className="mb-6 leading-tight">
+                  <span className="block text-5xl md:text-6xl lg:text-7xl font-bold">
+                    <span className="bg-gradient-to-r from-primary via-secondary to-nature bg-clip-text text-transparent">
+                      Buddy&#39;s
+                    </span>
+                    <br />
+                    <span className="text-neutral-darkest">Network</span>
                   </span>
-                  <br />
-                  <span className="text-neutral-darkest">Network</span>
+                  <span className="block text-lg md:text-xl font-medium text-neutral-dark mt-2">
+                    {t('badge')}
+                  </span>
                 </h1>
 
                 {/* Description */}

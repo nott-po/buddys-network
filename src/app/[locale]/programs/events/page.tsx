@@ -322,7 +322,7 @@ export default async function EventsPage({ params }: Props) {
 
                   <div className="grid md:grid-cols-2 gap-6">
                     <div className="space-y-3">
-                      <h4 className="font-semibold text-neutral-darkGray">{t.personalTitle}</h4>
+                      <h3 className="font-semibold text-neutral-darkGray text-base">{t.personalTitle}</h3>
                       <ul className="space-y-2 text-sm text-neutral-gray">
                         <li className="flex items-center space-x-2">
                           <span className="w-2 h-2 bg-primary rounded-full"></span>
@@ -344,7 +344,7 @@ export default async function EventsPage({ params }: Props) {
                     </div>
 
                     <div className="space-y-3">
-                      <h4 className="font-semibold text-neutral-darkGray">{t.professionalTitle}</h4>
+                      <h3 className="font-semibold text-neutral-darkGray text-base">{t.professionalTitle}</h3>
                       <ul className="space-y-2 text-sm text-neutral-gray">
                         <li className="flex items-center space-x-2">
                           <span className="w-2 h-2 bg-secondary rounded-full"></span>

@@ -34,12 +34,14 @@ export default function BentoGrid() {
               href={`/${locale}/programs/scholarships`}
               className="lg:col-span-2 lg:row-span-2 group relative h-[420px] md:h-[520px] lg:h-[600px] transition-all duration-500 animate-fade-in"
               style={{ animationDelay: '0.3s' }}
+              aria-label={t('scholarships.title')}
             >
               {/* Book illustration - bigger and full-bleed (no card wrapper) */}
               <div className="relative w-full h-full flex items-center justify-center">
                 <Image
                   src="/images/illustrations/book.png"
-                  alt="Education and Growth"
+                  alt=""
+                  aria-hidden="true"
                   width={600}
                   height={600}
                   className="w-full h-full object-contain max-w-[320px] md:max-w-[480px] lg:max-w-[520px] mx-auto transition-transform duration-700 animate-float"
@@ -82,12 +84,14 @@ export default function BentoGrid() {
               href={`/${locale}/programs/peer-groups`}
               className="group relative h-[220px] md:h-[260px] lg:h-[290px] transition-all duration-500 animate-fade-in"
               style={{ animationDelay: '0.5s' }}
+              aria-label={t('peerGroups.title')}
             >
               {/* Puzzle illustration - full-bleed, no card wrapper */}
               <div className="relative w-full h-full flex items-center md:items-start justify-center pt-0 md:pt-4">
                 <Image
                   src="/images/illustrations/puzzle.png"
-                  alt="Collaboration"
+                  alt=""
+                  aria-hidden="true"
                   width={280}
                   height={280}
                   className="w-full h-auto max-w-[160px] md:max-w-[200px] lg:max-w-[240px] md:-translate-y-4 transition-transform duration-700 animate-float"
@@ -124,12 +128,14 @@ export default function BentoGrid() {
               href={`/${locale}/programs/events`}
               className="group relative h-[220px] md:h-[260px] lg:h-[290px] transition-all duration-500 animate-fade-in"
               style={{ animationDelay: '0.7s' }}
+              aria-label={t('openEvents.title')}
             >
               {/* Plant illustration - full-bleed, no card wrapper */}
               <div className="relative w-full h-full flex items-center md:items-start justify-center pt-0 md:pt-4">
                 <Image
                   src="/images/illustrations/plant.png"
-                  alt="Growth"
+                  alt=""
+                  aria-hidden="true"
                   width={280}
                   height={280}
                   className="w-full h-auto max-w-[160px] md:max-w-[200px] lg:max-w-[240px] md:-translate-y-6 transition-transform duration-700 animate-float"
@@ -166,12 +172,14 @@ export default function BentoGrid() {
               href={`/${locale}/programs/club`}
               className="group relative h-[220px] md:h-[260px] lg:h-[290px] transition-all duration-500 animate-fade-in"
               style={{ animationDelay: '0.9s' }}
+              aria-label={t('clubActivities.title')}
             >
               {/* Tea illustration - full-bleed, no card wrapper */}
               <div className="relative w-full h-full flex items-center md:items-start justify-center pt-0 md:pt-4">
                 <Image
                   src="/images/illustrations/tea.png"
-                  alt="Community Activities"
+                  alt=""
+                  aria-hidden="true"
                   width={280}
                   height={280}
                   className="w-full h-auto max-w-[160px] md:max-w-[200px] lg:max-w-[240px] md:-translate-y-4 transition-transform duration-700 animate-float"

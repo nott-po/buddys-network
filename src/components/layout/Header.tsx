@@ -64,14 +64,15 @@ export default function Header() {
       <nav className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href={`/${locale}`} className="flex items-center space-x-4 group">
+          <Link href={`/${locale}`} className="flex items-center space-x-4 group" aria-label="Buddy's Network - Strona główna">
             <div className="relative w-14 h-14 transition-transform group-hover:scale-105">
               <Image
                 src="/images/logo/logo2.png"
-                alt={"Buddy&apos;s Network"}
+                alt=""
                 fill
                 className="object-contain"
                 priority
+                aria-hidden="true"
               />
             </div>
             <span className="text-2xl font-bold text-primary hidden sm:block">Buddy&apos;s Network</span>
